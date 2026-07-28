@@ -1,0 +1,1560 @@
+﻿diff --git a/index.html b/index.html
+index 4a35cb7..fed3ee8 100644
+--- a/index.html
++++ b/index.html
+@@ -6,650 +6,1083 @@
+     <title>╪│╪º╪▒╪º ┘å╪¼┘ü█î | ╪│╪º┘ä┘å ╪▓█î╪¿╪º█î█î ┘ê ┘à█î┌⌐╪º┘╛ ╪ó╪▒╪¬█î╪│╪¬ ┘╛╪▒█î┘à█î┘ê┘à</title>
+     <meta
+       name="description"
+-      content="╪¬╪║█î█î╪▒╪º╪¬ ╪▓█î╪¿╪º█î█î ╪º█î╪»┘çΓÇî╪ó┘ä ╪«┘ê╪» ╪▒╪º ╪»╪▒ ╪│╪º┘ä┘å ╪▓█î╪¿╪º█î█î ╪│╪º╪▒╪º ┘å╪¼┘ü█î ┌⌐╪┤┘ü ┌⌐┘å█î╪». ┘à╪¬╪«╪╡╪╡ ╪»╪▒ ╪▒┘å┌» ┘à┘ê█î ┘╛╪▒█î┘à█î┘ê┘à╪î ╪¿╪º┘ä█î╪º┌ÿ╪î ┘à█î┌⌐╪º┘╛ ╪╣╪▒┘ê╪│ ┘ê ╪º╪│╪¬╪º█î┘ä."
++      content="╪¬╪║█î█î╪▒╪º╪¬ ╪▓█î╪¿╪º█î█î ╪º█î╪»┘çΓÇî╪ó┘ä ╪«┘ê╪» ╪▒╪º ╪»╪▒ ╪│╪º┘ä┘å ╪▓█î╪¿╪º█î█î ╪│╪º╪▒╪º ┘å╪¼┘ü█î ┌⌐╪┤┘ü ┌⌐┘å█î╪». ┘à╪¬╪«╪╡╪╡ ╪»╪▒ ╪▒┘å┌» ┘à┘ê█î ┘╛╪▒█î┘à█î┘ê┘à╪î ╪¿╪º┘ä█î╪º┌ÿ╪î ┘à█î┌⌐╪º┘╛ ╪╣╪▒┘ê╪│ ┘ê ╪º╪¡█î╪º█î ┘à┘ê."
+     />
++    <meta name="theme-color" content="#0A0B0E" />
+ 
+-    <!-- Custom CSS -->
++    <!-- Open Graph SEO -->
++    <meta property="og:title" content="╪│╪º╪▒╪º ┘å╪¼┘ü█î | ╪│╪º┘ä┘å ╪▓█î╪¿╪º█î█î ┘╛╪▒█î┘à█î┘ê┘à" />
++    <meta
++      property="og:description"
++      content="╪¬╪«╪╡╪╡█îΓÇî╪¬╪▒█î┘å ┘à╪▒┌⌐╪▓ ╪¿╪º┘ä█î╪º┌ÿ╪î ╪▒┘å┌» ┘à┘ê ┘ê ┘à█î┌⌐╪º┘╛ ┘ä┘ê┌⌐╪│ ╪╣╪▒┘ê╪│"
++    />
++    <meta property="og:type" content="website" />
++
++    <!-- Custom Stylesheet -->
+     <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+-    <!-- Navigation -->
++    <!-- Floating Luxury Navigation -->
+     <nav class="navbar" id="navbar">
+       <div class="container nav-container">
+-        <a href="#" class="logo">╪│╪º╪▒╪º ┘å╪¼┘ü█î<span>.</span></a>
+-        <div class="nav-links">
++        <a href="#home" class="logo">
++          <img src="images/logo.jpg" alt="╪│╪º┘ä┘å ╪▓█î╪¿╪º█î█î ╪│█î┘à╪º ╪¿┘ä - ╪│╪º╪▒╪º ┘å╪¼┘ü█î" class="logo-img" />
++          <span class="logo-text">╪│█î┘à╪º ╪¿┘ä</span>
++        </a>
++
++        <div class="nav-links" id="nav-links">
++          <a href="#home" class="active">╪╡┘ü╪¡┘ç ╪º╪╡┘ä█î</a>
+           <a href="#services">╪«╪»┘à╪º╪¬</a>
++          <a href="#transformation">╪¬╪║█î█î╪▒╪º╪¬</a>
+           <a href="#portfolio">┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒┘ç╪º</a>
+           <a href="#salon">┘à╪¡█î╪╖ ╪│╪º┘ä┘å</a>
++          <a href="#faq">╪│┘ê╪º┘ä╪º╪¬ ┘à╪¬╪»╪º┘ê┘ä</a>
+         </div>
++
+         <div class="nav-actions">
+-          <a href="#quiz-section" class="btn btn-outline">┘à╪┤╪º┘ê╪▒┘ç ╪▒╪º█î┌»╪º┘å</a>
+-          <a href="#booking" class="btn btn-primary">╪▒╪▓╪▒┘ê ┘å┘ê╪¿╪¬</a>
++          <a href="#quiz-section" class="btn btn-secondary">┘à╪┤╪º┘ê╪▒┘ç ╪▒╪º█î┌»╪º┘å</a>
++          <button class="btn btn-primary open-booking-modal">╪▒╪▓╪▒┘ê ┘å┘ê╪¿╪¬</button>
+         </div>
+-        <!-- Mobile Menu Toggle -->
+-        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+-          <span></span>
+-          <span></span>
+-          <span></span>
++
++        <!-- Mobile Drawer Menu Toggle Button -->
++        <button
++          class="mobile-toggle"
++          id="mobile-toggle"
++          aria-label="╪¿╪º╪▓ ┌⌐╪▒╪»┘å ┘à┘å┘ê"
++        >
++          <svg
++            width="28"
++            height="28"
++            viewBox="0 0 24 24"
++            fill="none"
++            stroke="currentColor"
++            stroke-width="2"
++          >
++            <path d="M4 6h16M4 12h16M4 18h16"></path>
++          </svg>
+         </button>
+       </div>
+     </nav>
+ 
+-    <!-- Hero Section -->
+-    <header class="hero" id="home">
+-      <div class="container hero-container">
+-        <div class="hero-content animate-fade-in-up">
+-          <div class="badge">╪¬╪¼╪▒╪¿┘ç ┘ä┘ê┌⌐╪│ ╪▓█î╪¿╪º█î█î</div>
+-          <h1>╪┤┌⌐┘ê┘ç ┘ê╪º┘é╪╣█î ╪«┘ê╪» ╪▒╪º <span class="highlight">┘å┘à╪º█î╪º┘å ┌⌐┘å█î╪»</span></h1>
+-          <p>
+-            ╪▒┘å┌» ┘à┘ê█î ╪¬╪«╪╡╪╡█î╪î ╪¿╪º┘ä█î╪º┌ÿ ╪»┘é█î┘é ┘ê ┘à█î┌⌐╪º┘╛ ╪¿█îΓÇî┘å┘é╪╡ ┘à╪¬┘å╪º╪│╪¿ ╪¿╪º ┘ê█î┌ÿ┌»█îΓÇî┘ç╪º█î
+-            ┘à┘å╪¡╪╡╪▒ΓÇî╪¿┘çΓÇî┘ü╪▒╪» ╪┤┘à╪º. ╪¿╪º ╪º╪╣╪¬┘à╪º╪» ╪¿┘ç ┘å┘ü╪│ ┘é╪»┘à ╪¿╪▒╪»╪º╪▒█î╪».
+-          </p>
+-
+-          <div class="hero-buttons">
+-            <a
+-              href="#quiz-section"
+-              class="btn btn-primary btn-large glow-effect"
+-              >╪º╪│╪¬╪º█î┘ä ╪º█î╪»┘çΓÇî╪ó┘ä ╪«┘ê╪» ╪▒╪º ┘╛█î╪»╪º ┌⌐┘å█î╪»</a
+-            >
+-            <a href="#portfolio" class="btn btn-secondary btn-large"
+-              >┘à╪┤╪º┘ç╪»┘ç ╪¬╪║█î█î╪▒╪º╪¬</a
+-            >
+-          </div>
++    <!-- Mobile Navigation Drawer Overlay & Backdrop -->
++    <div class="mobile-drawer-overlay" id="mobile-overlay"></div>
++    <div class="mobile-menu-drawer" id="mobile-drawer">
++      <div class="mobile-drawer-header">
++        <a href="#home" class="logo">
++          <img src="images/logo.jpg" alt="╪│╪º┘ä┘å ╪▓█î╪¿╪º█î█î ╪│█î┘à╪º ╪¿┘ä - ╪│╪º╪▒╪º ┘å╪¼┘ü█î" class="logo-img" />
++          <span class="logo-text">╪│█î┘à╪º ╪¿┘ä</span>
++        </a>
++        <button class="mobile-close" id="mobile-close" aria-label="╪¿╪│╪¬┘å ┘à┘å┘ê">
++          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++            <line x1="18" y1="6" x2="6" y2="18"></line>
++            <line x1="6" y1="6" x2="18" y2="18"></line>
++          </svg>
++        </button>
++      </div>
++      <ul class="mobile-nav-links">
++        <li><a href="#home" class="mobile-link active">╪╡┘ü╪¡┘ç ╪º╪╡┘ä█î</a></li>
++        <li><a href="#services" class="mobile-link">╪«╪»┘à╪º╪¬ ┘ä┘ê┌⌐╪│</a></li>
++        <li><a href="#transformation" class="mobile-link">╪¬╪║█î█î╪▒╪º╪¬ ┘é╪¿┘ä ┘ê ╪¿╪╣╪»</a></li>
++        <li><a href="#portfolio" class="mobile-link">┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒┘ç╪º</a></li>
++        <li><a href="#salon" class="mobile-link">╪¬╪¼╪▒╪¿┘ç ╪│╪º┘ä┘å</a></li>
++        <li><a href="#faq" class="mobile-link">╪│┘ê╪º┘ä╪º╪¬ ┘à╪¬╪»╪º┘ê┘ä</a></li>
++      </ul>
++      <div class="mobile-drawer-footer">
++        <button class="btn btn-primary w-full open-booking-modal">
++          ╪▒╪▓╪▒┘ê ┘ü┘ê╪▒█î ┘å┘ê╪¿╪¬
++        </button>
++        <a href="#quiz-section" class="btn btn-secondary w-full mobile-link">╪¬╪│╪¬ ╪º╪│╪¬╪º█î┘ä ╪▓█î╪¿╪º█î█î</a>
++      </div>
++    </div>
+ 
+-          <div class="hero-stats">
+-            <div class="stat">
+-              <span class="stat-number">+█▒█░</span>
+-              <span class="stat-label">╪│╪º┘ä ╪¬╪¼╪▒╪¿┘ç</span>
++    <!-- Main Content Wrapper -->
++    <main>
++      <!-- Hero Section -->
++      <section class="hero" id="home">
++        <div class="container hero-grid">
++          <div class="hero-content reveal">
++            <div class="hero-badge">
++              <div class="status-ping">
++                <span></span>
++                <span></span>
++              </div>
++              ╪¬╪¼╪▒╪¿┘ç ╪º╪│╪¬╪½┘å╪º█î█î ┘ê ┘ä┘ê┌⌐╪│ ╪▓█î╪¿╪º█î█î
+             </div>
+-            <div class="stat">
+-              <span class="stat-number">+█╡ ┘ç╪▓╪º╪▒</span>
+-              <span class="stat-label">┘à╪┤╪¬╪▒█î ╪▒╪º╪╢█î</span>
++
++            <h1 class="hero-title">
++              ╪┤┌⌐┘ê┘ç ┘ê╪º┘é╪╣█î ╪«┘ê╪» ╪▒╪º
++              <span class="gradient-text">┘å┘à╪º█î╪º┘å ┌⌐┘å█î╪»</span>
++            </h1>
++
++            <p class="hero-description">
++              ╪╖╪▒╪º╪¡█î ╪º╪«╪¬╪╡╪º╪╡█î ╪¿╪º┘ä█î╪º┌ÿ ╪»╪º█î┘à┘å╪┤┘å╪º┘ä╪î ╪▒┘å┌» ┘à┘ê█î ╪¿╪»┘ê┘å ╪ó╪│█î╪¿ ┘ê ┘à█î┌⌐╪º┘╛ ┘à╪º┘å╪»┌»╪º╪▒ ╪╣╪▒┘ê╪│ ┘à╪¬┘å╪º╪│╪¿ ╪¿╪º ┘ç╪º╪▒┘à┘ê┘å█î ┌å┘ç╪▒┘ç ┘ê ╪│╪¿┌⌐ ╪▓┘å╪»┌»█î ╪┤┘à╪º.
++            </p>
++
++            <div class="hero-buttons">
++              <a href="#quiz-section" class="btn btn-primary btn-large">
++                ╪º╪│╪¬╪º█î┘ä ╪º╪«╪¬╪╡╪º╪╡█î ╪«┘ê╪» ╪▒╪º ┘╛█î╪»╪º ┌⌐┘å█î╪»
++                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <path d="M19 12H5M12 19l-7-7 7-7"/>
++                </svg>
++              </a>
++              <a href="#transformation" class="btn btn-secondary btn-large">
++                ┘à╪┤╪º┘ç╪»┘ç ╪¬╪║█î█î╪▒╪º╪¬ ┘é╪¿┘ä ┘ê ╪¿╪╣╪»
++              </a>
++            </div>
++
++            <div class="hero-stats">
++              <div class="stat-item">
++                <span class="stat-number" data-target="10">+█▒█░</span>
++                <span class="stat-label">╪│╪º┘ä ╪¬╪¼╪▒╪¿┘ç ╪¬╪«╪╡╪╡█î</span>
++              </div>
++              <div class="stat-divider"></div>
++              <div class="stat-item">
++                <span class="stat-number" data-target="5000">+█╡,█░█░█░</span>
++                <span class="stat-label">┘à╪┤╪¬╪▒█î ╪▒╪º╪╢█î</span>
++              </div>
++              <div class="stat-divider"></div>
++              <div class="stat-item">
++                <span class="stat-number" data-target="99">█╣█╣┘¬</span>
++                <span class="stat-label">╪▒╪╢╪º█î╪¬ ╪º╪▓ ┌⌐█î┘ü█î╪¬ ╪«╪»┘à╪º╪¬</span>
++              </div>
+             </div>
+           </div>
+-        </div>
+-        <div class="hero-image-wrapper animate-fade-in">
+-          <!-- Using placeholder for professional portrait -->
+-          <div class="image-glass-frame">
+-            <img
+-              src="images/hero-portrait.jpg"
+-              alt="╪│╪º╪▒╪º ┘å╪¼┘ü█î - ┘à█î┌⌐╪º┘╛ ╪ó╪▒╪¬█î╪│╪¬ ┘ê ┘ç█î╪▒╪º╪│╪¬╪º█î┘ä█î╪│╪¬ ╪¡╪▒┘ü┘çΓÇî╪º█î"
+-              class="hero-portrait"
+-            />
+-            <!-- Floating Before/After Card -->
+-            <div class="floating-card">
+-              <div class="floating-card-inner">
++
++          <div class="hero-visual reveal reveal-delay-2">
++            <div class="portrait-frame">
++              <img
++                src="images/hero-portrait.jpg"
++                alt="╪│╪º╪▒╪º ┘å╪¼┘ü█î - ┘à█î┌⌐╪º┘╛ ╪ó╪▒╪¬█î╪│╪¬ ┘ê ┘ç█î╪▒╪º╪│╪¬╪º█î┘ä█î╪│╪¬ ╪º╪▒╪┤╪»"
++                class="portrait-image"
++              />
++
++              <!-- Floating Review Card -->
++              <div class="floating-pill">
+                 <img src="images/before-after-01.jpg" alt="╪¬╪║█î█î╪▒╪º╪¬ ╪¿╪º┘ä█î╪º┌ÿ" />
+-                <div class="floating-card-text">
+-                  <span class="stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</span>
+-                  <p>"╪▒┘å┌» ┘ü┘ê┘éΓÇî╪º┘ä╪╣╪º╪»┘ç!"</p>
++                <div class="floating-pill-content">
++                  <div class="stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</div>
++                  <p>"╪¿┘ç╪¬╪▒█î┘å ╪▒┘å┌» ┘à┘ê█î█î ┌⌐┘ç ╪»╪º╪┤╪¬┘à!"</p>
+                 </div>
+               </div>
++
++              <!-- Floating Badge -->
++              <div class="floating-badge">
++                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
++                </svg>
++                ┘à█î┌⌐╪º┘╛ ╪ó╪▒╪¬█î╪│╪¬ ╪¿╪▒╪¬╪▒ ╪│╪º┘ä
++              </div>
+             </div>
+           </div>
+         </div>
+-      </div>
+-    </header>
++      </section>
+ 
+-    <!-- Problem / Agitation Section -->
+-    <section class="problems" id="problems">
+-      <div class="container">
+-        <div class="section-header text-center animate-on-scroll">
+-          <h2>╪ó█î╪º ╪º╪│╪¬╪º█î┘ä ┘ü╪╣┘ä█îΓÇî╪¬╪º┘å ╪┤┘à╪º ╪▒╪º ┘à╪¡╪»┘ê╪» ┌⌐╪▒╪»┘ç ╪º╪│╪¬╪ƒ</h2>
+-          <p>
+-            ╪¿╪│█î╪º╪▒█î ╪º╪▓ ╪▓┘å╪º┘å ╪¿┘ç ╪▒┘ê╪¬█î┘åΓÇî┘ç╪º█î ╪▓█î╪¿╪º█î█î ┌⌐┘ç ┘ê█î┌ÿ┌»█îΓÇî┘ç╪º█î ╪╖╪¿█î╪╣█î ╪ó┘åΓÇî┘ç╪º ╪▒╪º ╪¬┌⌐┘à█î┘ä
+-            ┘å┘à█îΓÇî┌⌐┘å╪»╪î ╪¿╪│┘å╪»┘ç ┘à█îΓÇî┌⌐┘å┘å╪».
+-          </p>
++      <!-- Before / After Interactive Comparison Slider -->
++      <section class="transformation-section" id="transformation">
++        <div class="container">
++          <div class="section-header reveal">
++            <div class="section-tag">
++              <span class="dot"></span>
++              ╪¬╪║█î█î╪▒╪º╪¬ ┘ê╪º┘é╪╣█î
++            </div>
++            <h2 class="section-title">┘à┘é╪º█î╪│┘ç ╪▓┘å╪»┘ç ┘é╪¿┘ä ┘ê ╪¿╪╣╪»</h2>
++            <p class="section-subtitle">
++              ╪º╪│┘ä╪º█î╪»╪▒ ╪▓█î╪▒ ╪▒╪º ╪¼╪º╪¿┘çΓÇî╪¼╪º ┌⌐┘å█î╪» ╪¬╪º ┌⌐█î┘ü█î╪¬ ╪»┌⌐┘ä╪▒┘ç╪î ╪º╪¡█î╪º ┘ê ╪¿╪º┘ä█î╪º┌ÿ ╪º╪«╪¬╪╡╪º╪╡█î ╪│╪º┘ä┘å ╪▒╪º ┘à╪┤╪º┘ç╪»┘ç ┌⌐┘å█î╪».
++            </p>
++          </div>
++
++          <div class="ba-slider-container reveal reveal-delay-1">
++            <div class="ba-slider" id="ba-slider">
++              <div class="ba-before">
++                <img src="images/before-after-02.jpg" alt="┘é╪¿┘ä ╪º╪▓ ╪▒┘å┌» ┘à┘ê" />
++                <div class="ba-label ba-label-before">┘é╪¿┘ä (┘å╪¬█î╪¼┘ç ╪│╪º┘ä┘å ╪»█î┌»╪▒)</div>
++              </div>
++              <div class="ba-after" id="ba-after-layer">
++                <img src="images/before-after-01.jpg" alt="╪¿╪╣╪» ╪º╪▓ ╪¿╪º┘ä█î╪º┌ÿ ┘ä┘ê┌⌐╪│ ╪│╪º╪▒╪º ┘å╪¼┘ü█î" />
++                <div class="ba-label ba-label-after">╪¿╪╣╪» (╪¿╪º┘ä█î╪º┌ÿ ┘ä┘ê┌⌐╪│ ╪│╪º╪▒╪º ┘å╪¼┘ü█î)</div>
++              </div>
++              <div class="ba-handle" id="ba-handle">
++                <div class="ba-handle-button">
++                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                    <polyline points="15 18 9 12 15 6"></polyline>
++                    <polyline points="9 18 15 12 9 6" style="transform: rotate(180deg); transform-origin: center;"></polyline>
++                  </svg>
++                </div>
++              </div>
++            </div>
++          </div>
+         </div>
++      </section>
+ 
+-        <div class="problems-grid">
+-          <div class="problem-card animate-on-scroll delay-1">
+-            <div class="problem-icon">
+-              <!-- SVG Placeholder for icon -->
+-              <svg
+-                width="24"
+-                height="24"
+-                viewBox="0 0 24 24"
+-                fill="none"
+-                stroke="currentColor"
+-                stroke-width="2"
+-              >
+-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+-                <circle cx="12" cy="7" r="4"></circle>
+-              </svg>
++      <!-- Pain Points & Agitation Section -->
++      <section class="problems-section" id="problems">
++        <div class="container">
++          <div class="section-header reveal">
++            <div class="section-tag">
++              <span class="dot"></span>
++              ┌å╪▒╪º ╪│╪º╪▒╪º ┘å╪¼┘ü█î╪ƒ
+             </div>
+-            <h3>╪╣╪»┘à ╪¬┘å╪º╪│╪¿ ╪▒┘å┌»</h3>
+-            <p>
+-              ╪▒┘å┌» ┘à┘ê█î ╪┤┘à╪º ╪¿╪º ╪▒┘å┌» ╪╖╪¿█î╪╣█î ┘╛┘ê╪│╪¬╪¬╪º┘å ╪»╪▒ ╪¬╪╢╪º╪» ╪º╪│╪¬ ┘ê ╪¿╪º╪╣╪½ ┘à█îΓÇî╪┤┘ê╪» ╪«╪│╪¬┘ç ╪¿┘ç
+-              ┘å╪╕╪▒ ╪¿╪▒╪│█î╪».
++            <h2 class="section-title">╪º╪▓ ╪▒┘ê╪¬█î┘åΓÇî┘ç╪º█î ╪¬┌⌐╪▒╪º╪▒█î ┘ê ┘å╪¬╪º█î╪¼ ┘å╪º┘à╪╖┘ä┘ê╪¿ ╪«╪│╪¬┘ç ╪┤╪»┘çΓÇî╪º█î╪»╪ƒ</h2>
++            <p class="section-subtitle">
++              ┘à╪º ╪»╪▒┌⌐ ┘à█îΓÇî┌⌐┘å█î┘à ┌⌐┘ç ╪º┘å╪¬╪«╪º╪¿ ╪«╪»┘à╪º╪¬ ╪▓█î╪¿╪º█î█î ┘å╪º╪»╪▒╪│╪¬ ┘à█îΓÇî╪¬┘ê╪º┘å╪» ╪º╪╣╪¬┘à╪º╪» ╪¿┘ç ┘å┘ü╪│ ╪┤┘à╪º ╪▒╪º ╪¬╪¡╪¬ ╪¬╪º╪½█î╪▒ ┘é╪▒╪º╪▒ ╪»┘ç╪».
+             </p>
+           </div>
+ 
+-          <div class="problem-card animate-on-scroll delay-2">
+-            <div class="problem-icon">
+-              <svg
+-                width="24"
+-                height="24"
+-                viewBox="0 0 24 24"
+-                fill="none"
+-                stroke="currentColor"
+-                stroke-width="2"
+-              >
+-                <circle cx="12" cy="12" r="10"></circle>
+-                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+-                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+-                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+-              </svg>
++          <div class="problems-grid">
++            <div class="glass-card problem-card reveal reveal-delay-1">
++              <div class="problem-icon-wrapper">
++                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <circle cx="12" cy="12" r="10"></circle>
++                  <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
++                </svg>
++              </div>
++              <h3>╪╣╪»┘à ╪¬┘å╪º╪│╪¿ ╪▒┘å┌» ╪¿╪º ╪¬┘å╪º┌ÿ ┘╛┘ê╪│╪¬</h3>
++              <p>
++                ╪º╪│╪¬┘ü╪º╪»┘ç ╪º╪▓ ┘ü╪▒┘à┘ê┘äΓÇî┘ç╪º█î ┌⌐┘╛█îΓÇî┘╛╪│╪¬ ╪┤╪»┘ç ╪¿╪»┘ê┘å ╪│┘å╪¼╪┤ ╪¬┘å╪º┌ÿ ┌»╪▒┘à █î╪º ╪│╪▒╪» ┘╛┘ê╪│╪¬ ╪¿╪º╪╣╪½ ╪¿█îΓÇî╪▒┘ê╪¡ █î╪º ╪«╪│╪¬┘ç ╪¿┘ç ┘å╪╕╪▒ ╪▒╪│█î╪»┘å ┌å┘ç╪▒┘ç ┘à█îΓÇî╪┤┘ê╪».
++              </p>
++            </div>
++
++            <div class="glass-card problem-card reveal reveal-delay-2">
++              <div class="problem-icon-wrapper">
++                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
++                  <circle cx="12" cy="13" r="4"></circle>
++                </svg>
++              </div>
++              <h3>╪ó╪▒╪º█î╪┤ ╪│┘å┌»█î┘å ┘ê ┌⌐█î┌⌐█î ╪»╪▒ ╪╣┌⌐╪│ΓÇî┘ç╪º</h3>
++              <p>
++                ╪¿╪│█î╪º╪▒█î ╪º╪▓ ┘à█î┌⌐╪º┘╛ΓÇî┘ç╪º ╪»╪▒ ┘ü╪º╪╡┘ä┘ç ┘å╪▓╪»█î┌⌐ ╪│┘å┌»█î┘å ╪¿┘ç ┘å╪╕╪▒ ┘à█îΓÇî╪▒╪│┘å╪» █î╪º ╪¬╪¡╪¬ ┘å┘ê╪▒ ┘ü┘ä╪º╪┤ ╪»┘ê╪▒╪¿█î┘å ╪¬╪║█î█î╪▒ ╪▒┘å┌» ╪»╪º╪»┘ç ┘ê ╪»╪▒╪«╪┤╪┤ ╪╖╪¿█î╪╣█î ┘å╪»╪º╪▒┘å╪».
++              </p>
++            </div>
++
++            <div class="glass-card problem-card reveal reveal-delay-3">
++              <div class="problem-icon-wrapper">
++                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
++                </svg>
++              </div>
++              <h3>╪«╪┤┌⌐█î ┘ê ╪ó╪│█î╪¿ΓÇî╪»█î╪»┌»█î ╪│╪º┘é┘ç ┘à┘ê</h3>
++              <p>
++                ╪º╪│╪¬┘ü╪º╪»┘ç ╪º╪▓ ┘à┘ê╪º╪» ╪┤█î┘à█î╪º█î█î ┘å╪º┘à╪▒╪║┘ê╪¿ ╪»╪▒ ╪»┌⌐┘ä╪▒┘ç ╪¿╪º╪╣╪½ ┘à┘ê╪«┘ê╪▒┘ç╪î ╪┤┌⌐┘å┘å╪»┌»█î ┘ê ╪º╪▓ ╪¿█î┘å ╪▒┘ü╪¬┘å ┘ä╪╖╪º┘ü╪¬ ╪╖╪¿█î╪╣█î ┘à┘ê ┘à█îΓÇî╪┤┘ê╪».
++              </p>
+             </div>
+-            <h3>┘å╪º╪º┘à█î╪»█î ╪»╪▒ ╪╣┌⌐╪│ΓÇî┘ç╪º</h3>
+-            <p>
+-              ╪ó╪▒╪º█î╪┤ ╪┤┘à╪º ╪»╪▒ ╪ó█î┘å┘ç ╪╣╪º┘ä█î ╪¿┘ç ┘å╪╕╪▒ ┘à█îΓÇî╪▒╪│╪» ╪º┘à╪º ╪»╪▒ ╪╣┌⌐╪│ΓÇî┘ç╪º ╪¿█îΓÇî╪▒┘ê╪¡ █î╪º
+-              ╪║█î╪▒╪╖╪¿█î╪╣█î ╪º╪│╪¬.
+-            </p>
+           </div>
++        </div>
++      </section>
+ 
+-          <div class="problem-card animate-on-scroll delay-3">
+-            <div class="problem-icon">
+-              <svg
+-                width="24"
+-                height="24"
+-                viewBox="0 0 24 24"
+-                fill="none"
+-                stroke="currentColor"
+-                stroke-width="2"
+-              >
+-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+-              </svg>
++      <!-- Services Showcase Section -->
++      <section class="services-section" id="services">
++        <div class="container">
++          <div class="section-header reveal">
++            <div class="section-tag">
++              <span class="dot"></span>
++              ╪«╪»┘à╪º╪¬ ╪¬╪«╪╡╪╡█î
+             </div>
+-            <h3>┘à┘ê┘ç╪º█î ╪ó╪│█î╪¿ΓÇî╪»█î╪»┘ç</h3>
+-            <p>
+-              ╪¬╪¼╪▒╪¿█î╪º╪¬ ┘é╪¿┘ä█î ╪»╪▒ ╪│╪º┘ä┘åΓÇî┘ç╪º ┘à┘ê┘ç╪º█î ╪┤┘à╪º ╪▒╪º ╪┤┌⌐┘å┘å╪»┘ç╪î ╪«╪┤┌⌐ ┘ê ╪¿╪»┘ê┘å ╪»╪▒╪«╪┤╪┤
+-              ╪╖╪¿█î╪╣█î ┌⌐╪▒╪»┘ç ╪º╪│╪¬.
++            <h2 class="section-title">╪¬╪¼╪▒╪¿┘ç ╪º╪│╪¬╪º█î┘ä ╪º╪«╪¬╪╡╪º╪╡█î ╪┤┘à╪º</h2>
++            <p class="section-subtitle">
++              ╪¬╪▒┌⌐█î╪¿█î ╪º╪▓ ┘ç┘å╪▒ ┘ê ╪¬┌⌐┘å█î┌⌐ΓÇî┘ç╪º█î ╪¿█î┘åΓÇî╪º┘ä┘à┘ä┘ä█î ╪▒┘ê╪▓ ╪»┘å█î╪º ╪¿╪▒╪º█î ╪¿╪▒╪ó┘ê╪▒╪»┘ç ┌⌐╪▒╪»┘å ╪¿╪º┘ä╪º╪¬╪▒█î┘å ╪º╪│╪¬╪º┘å╪»╪º╪▒╪»┘ç╪º█î ╪▓█î╪¿╪º█î█î.
+             </p>
+           </div>
+-        </div>
+-      </div>
+-    </section>
+ 
+-    <!-- Interactive Quiz (Lead Magnet) -->
+-    <section class="quiz-section" id="quiz-section">
+-      <div class="container">
+-        <div class="quiz-container animate-on-scroll">
+-          <div class="quiz-visual">
+-            <img
+-              src="images/quiz-illustration.jpg"
+-              alt="┘à╪┤╪º┘ê╪▒┘ç ╪▓█î╪¿╪º█î█î"
+-              class="quiz-image"
+-            />
+-            <div class="quiz-overlay">
+-              <h2>╪º╪│╪¬╪º█î┘ä ╪«╪º╪╡ ╪«┘ê╪» ╪▒╪º ┌⌐╪┤┘ü ┌⌐┘å█î╪»</h2>
+-              <p>╪»╪▒ ╪ó╪▓┘à┘ê┘å █▒ ╪»┘é█î┘é┘çΓÇî╪º█î ╪▓█î╪¿╪º█î█î ┘à╪º ╪┤╪▒┌⌐╪¬ ┌⌐┘å█î╪».</p>
++          <div class="services-grid">
++            <!-- Service Card 1 -->
++            <div class="glass-card service-card reveal reveal-delay-1">
++              <div>
++                <div class="service-header">
++                  <div class="service-icon">
++                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
++                    </svg>
++                  </div>
++                  <span class="service-badge">┘╛╪▒╪╖╪▒┘ü╪»╪º╪▒╪¬╪▒█î┘å</span>
++                </div>
++                <h3>╪¿╪º┘ä█î╪º┌ÿ ┘ê ╪▒┘å┌» ┘à┘ê█î ╪»╪º█î┘à┘å╪┤┘å╪º┘ä</h3>
++                <p>╪¬┌⌐┘å█î┌⌐ ╪º╪«╪¬╪╡╪º╪╡█î ╪º█î╪¼╪º╪» ╪│╪º█î┘çΓÇî┘ç╪º█î ╪╖╪¿█î╪╣█î ┘ê ╪╣┘à┘éΓÇî╪»╪º╪▒ ╪¿╪»┘ê┘å ╪º█î╪¼╪º╪» ┘à╪▒╪▓ ┘ê ╪¿╪»┘ê┘å ┘å█î╪º╪▓ ╪¿┘ç ╪▒█î╪┤┘çΓÇî┌»█î╪▒█î ┘à╪»╪º┘ê┘à.</p>
++                <ul class="service-features">
++                  <li>
++                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <polyline points="20 6 9 17 4 12"></polyline>
++                    </svg>
++                    ╪º╪│╪¬┘ü╪º╪»┘ç ╪º╪▓ ╪▒┘ê╪┤┘åΓÇî┌⌐┘å┘å╪»┘çΓÇî┘ç╪º█î ╪¿╪»┘ê┘å ╪ó╪│█î╪¿ Olaplex
++                  </li>
++                  <li>
++                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <polyline points="20 6 9 17 4 12"></polyline>
++                    </svg>
++                    ┘ü╪▒┘à┘ä╪º╪│█î┘ê┘å ╪º╪▒┌»╪º┘å█î┌⌐ ┘ê ╪¬╪½╪¿█î╪¬ ╪»╪▒╪«╪┤╪┤
++                  </li>
++                  <li>
++                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <polyline points="20 6 9 17 4 12"></polyline>
++                    </svg>
++                    ┘à╪┤╪º┘ê╪▒┘ç ╪¬╪«╪╡╪╡█î ╪ó┘å╪º┘ä█î╪▓ ┘ç╪º╪▒┘à┘ê┘å█î ┘╛┘ê╪│╪¬
++                  </li>
++                </ul>
++              </div>
++              <button class="btn btn-outline w-full open-booking-modal" data-service="╪¿╪º┘ä█î╪º┌ÿ ┘ê ╪▒┘å┌» ┘à┘ê">
++                ╪▒╪▓╪▒┘ê ┘å┘ê╪¿╪¬ ┘à╪┤╪º┘ê╪▒┘ç
++              </button>
++            </div>
++
++            <!-- Service Card 2 -->
++            <div class="glass-card service-card reveal reveal-delay-2">
++              <div>
++                <div class="service-header">
++                  <div class="service-icon">
++                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
++                    </svg>
++                  </div>
++                  <span class="service-badge">┘ä┘ê┌⌐╪│ ┘ê ┘ê█î┌ÿ┘ç</span>
++                </div>
++                <h3>┘à█î┌⌐╪º┘╛ ╪¬╪«╪╡╪╡█î ╪╣╪▒┘ê╪│</h3>
++                <p>┌»╪▒█î┘à ╪│┘ç ╪¿╪╣╪»█î ┘ê ╪¬┌⌐┘å█î┌⌐ ┘à╪º┘å╪»┌»╪º╪▒█î █▓█┤ ╪│╪º╪╣╪¬┘ç ┘à╪¬┘å╪º╪│╪¿ ╪¿╪º ┘å┘ê╪▒┘╛╪▒╪»╪º╪▓█î ╪╣┌⌐╪º╪│█î ┘ê ┌å┘ç╪▒┘ç ┘ê╪º┘é╪╣█î ╪┤┘à╪º.</p>
++                <ul class="service-features">
++                  <li>
++                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <polyline points="20 6 9 17 4 12"></polyline>
++                    </svg>
++                    ╪▓█î╪▒╪│╪º╪▓█î ┘╛┘ê╪│╪¬ ╪¿╪º ╪¿╪▒┘å╪»┘ç╪º█î ╪»╪▒╪¼┘ç █î┌⌐ ╪¼┘ç╪º┘å
++                  </li>
++                  <li>
++                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <polyline points="20 6 9 17 4 12"></polyline>
++                    </svg>
++                    ╪¬╪│╪¬ ┘à█î┌⌐╪º┘╛ ┘é╪¿┘ä ╪º╪▓ ┘à╪▒╪º╪│┘à
++                  </li>
++                  <li>
++                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <polyline points="20 6 9 17 4 12"></polyline>
++                    </svg>
++                    ┘╛┌⌐█î╪¼ ┌⌐╪º┘à┘ä ╪¬╪º╪¼╪î ╪┤┘å█î┘ê┘å ┘ê ╪«╪»┘à╪º╪¬ ┘å╪º╪«┘å
++                  </li>
++                </ul>
++              </div>
++              <button class="btn btn-outline w-full open-booking-modal" data-service="┘à█î┌⌐╪º┘╛ ╪╣╪▒┘ê╪│">
++                ╪º╪│╪¬╪╣┘ä╪º┘à ┘╛┌⌐█î╪¼ ╪╣╪▒┘ê╪│
++              </button>
++            </div>
++
++            <!-- Service Card 3 -->
++            <div class="glass-card service-card reveal reveal-delay-3">
++              <div>
++                <div class="service-header">
++                  <div class="service-icon">
++                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
++                    </svg>
++                  </div>
++                  <span class="service-badge">╪¬╪▒┘à█î┘à ┘ê ╪º╪¡█î╪º</span>
++                </div>
++                <h3>╪¿┘ê╪¬╪º┌⌐╪│ ┘ê ┘╛╪▒┘ê╪¬╪ª█î┘åΓÇî╪¬╪▒╪º┘╛█î ┘à┘ê</h3>
++                <p>╪¿╪º╪▓╪│╪º╪▓█î ╪╣┘à┘é█î ┘ü█î╪¿╪▒ ┘à┘ê┘ç╪º█î ╪ó╪│█î╪¿ΓÇî╪»█î╪»┘ç╪î ╪╡╪º┘ü█î ╪╖╪¿█î╪╣█î ┘ê ╪¿╪º╪▓┌»╪▒╪»╪º┘å╪»┘å ╪»╪▒╪«╪┤╪┤ ╪º╪¿╪▒█î╪┤┘à█î ╪¿┘ç ╪│╪º┘é┘çΓÇî┘ç╪º.</p>
++                <ul class="service-features">
++                  <li>
++                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <polyline points="20 6 9 17 4 12"></polyline>
++                    </svg>
++                    ╪º╪│╪¬┘ü╪º╪»┘ç ╪º╪▓ ┘à┘ê╪º╪» ╪º╪▒┌»╪º┘å█î┌⌐ K├⌐rastase
++                  </li>
++                  <li>
++                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <polyline points="20 6 9 17 4 12"></polyline>
++                    </svg>
++                    ┘à╪º┘å╪»┌»╪º╪▒█î █┤ ╪¬╪º █╢ ┘à╪º┘ç┘ç ┘ç┘à╪▒╪º┘ç ╪¿╪º ╪ó╪¿╪▒╪│╪º┘å█î
++                  </li>
++                  <li>
++                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <polyline points="20 6 9 17 4 12"></polyline>
++                    </svg>
++                    ╪¿╪»┘ê┘å ┘ü╪▒┘à╪º┘ä╪»╪ª█î╪» ┘ê ╪¿╪»┘ê┘å ┌»╪º╪▓ ╪│┘à█î
++                  </li>
++                </ul>
++              </div>
++              <button class="btn btn-outline w-full open-booking-modal" data-service="╪º╪¡█î╪º█î ┘à┘ê">
++                ╪▒╪▓╪▒┘ê ┘å┘ê╪¿╪¬ ╪»╪▒┘à╪º┘å ┘à┘ê
++              </button>
+             </div>
+           </div>
++        </div>
++      </section>
+ 
+-          <div class="quiz-content" id="quiz-flow">
+-            <!-- Progress Bar -->
+-            <div class="progress-bar-container">
+-              <div
+-                class="progress-bar"
+-                id="quiz-progress"
+-                style="width: 25%"
+-              ></div>
++      <!-- Interactive Quiz Section (Lead Magnet Funnel) -->
++      <section class="quiz-section" id="quiz-section">
++        <div class="container">
++          <div class="quiz-wrapper reveal">
++            <div class="quiz-banner">
++              <div class="quiz-banner-content">
++                <div class="section-tag" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff;">
++                  <span class="dot"></span>
++                  ┌⌐┘ê╪ª█î╪▓ ┘ç┘ê╪┤┘à┘å╪» ╪▓█î╪¿╪º█î█î
++                </div>
++                <h2>╪º╪│╪¬╪º█î┘ä ┘à┘å╪¡╪╡╪▒ΓÇî╪¿┘çΓÇî┘ü╪▒╪» ╪«┘ê╪» ╪▒╪º ┌⌐╪┤┘ü ┌⌐┘å█î╪»</h2>
++                <p>╪¿╪º ┘╛╪º╪│╪« ╪¿┘ç █│ ╪│┘ê╪º┘ä ╪│╪▒█î╪╣╪î ╪¿┘ç╪¬╪▒█î┘å ╪¬╪▒┌⌐█î╪¿ ╪▒┘å┌» ┘ê ┘à█î┌⌐╪º┘╛ ┘à┘å╪º╪│╪¿ ┌å┘ç╪▒┘ç ╪«┘ê╪» ╪▒╪º ╪»╪▒█î╪º┘ü╪¬ ┌⌐┘å█î╪».</p>
++              </div>
+             </div>
+ 
+-            <!-- Questions Container -->
+-            <div class="questions-wrapper">
+-              <!-- Question 1 -->
+-              <div class="quiz-step active" id="step-1">
++            <div class="quiz-main">
++              <div class="progress-header">
++                <span id="quiz-step-text">┘à╪▒╪¡┘ä┘ç █▒ ╪º╪▓ █│</span>
++                <span id="quiz-percent-text">█│█│┘¬ ┌⌐╪º┘à┘ä ╪┤╪»┘ç</span>
++              </div>
++              <div class="progress-track">
++                <div class="progress-fill" id="quiz-progress-bar"></div>
++              </div>
++
++              <!-- Question Step 1 -->
++              <div class="quiz-step active" id="quiz-step-1">
+                 <h3>┘ç╪»┘ü ╪º╪╡┘ä█î ╪▓█î╪¿╪º█î█î ╪┤┘à╪º ┌å█î╪│╪¬╪ƒ</h3>
+                 <div class="options-grid">
+-                  <label class="quiz-option">
+-                    <input type="radio" name="goal" value="color" required />
+-                    <span class="option-card">╪¬╪║█î█î╪▒ ┌⌐╪º┘à┘ä ╪▒┘å┌» ┘à┘ê</span>
++                  <label class="option-card-label">
++                    <input type="radio" name="goal" value="color" />
++                    <div class="option-card-inner">
++                      <span>╪¬╪║█î█î╪▒ ┌⌐╪º┘à┘ä ╪▒┘å┌» ┘à┘ê ┘ê ╪¿╪º┘ä█î╪º┌ÿ</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+-                  <label class="quiz-option">
++                  <label class="option-card-label">
+                     <input type="radio" name="goal" value="refresh" />
+-                    <span class="option-card">╪╖╪▒╪º┘ê╪¬ ╪¿╪«╪┤█î╪»┘å ╪¿┘ç ╪╕╪º┘ç╪▒ ┘ü╪╣┘ä█î</span>
++                    <div class="option-card-inner">
++                      <span>╪╖╪▒╪º┘ê╪¬ ┘ê ╪»╪▒╪«╪┤╪┤ ┘à╪¼╪»╪» ┘à┘ê┘ç╪º</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+-                  <label class="quiz-option">
++                  <label class="option-card-label">
+                     <input type="radio" name="goal" value="bridal" />
+-                    <span class="option-card">┘à█î┌⌐╪º┘╛ ╪╣╪▒┘ê╪│ / ┘à╪¼╪º┘ä╪│</span>
++                    <div class="option-card-inner">
++                      <span>┘à█î┌⌐╪º┘╛ ╪¡╪▒┘ü┘çΓÇî╪º█î ╪╣╪▒┘ê╪│ / ┘à╪¼╪º┘ä╪│</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+-                  <label class="quiz-option">
++                  <label class="option-card-label">
+                     <input type="radio" name="goal" value="repair" />
+-                    <span class="option-card">╪¬╪▒┘à█î┘à ┘ê ╪º╪¡█î╪º█î ┘à┘ê</span>
++                    <div class="option-card-inner">
++                      <span>╪¬╪▒┘à█î┘à╪î ╪º╪¡█î╪º ┘ê ┘╛╪▒┘ê╪¬╪ª█î┘åΓÇî╪¬╪▒╪º┘╛█î</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+                 </div>
+-                <div class="quiz-actions">
+-                  <button
+-                    type="button"
+-                    class="btn btn-primary next-btn"
+-                    disabled
+-                  >
++                <div class="quiz-nav" style="justify-content: flex-end;">
++                  <button class="btn btn-primary quiz-next-btn" disabled>
+                     ┘à╪▒╪¡┘ä┘ç ╪¿╪╣╪»
++                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <path d="M19 12H5M12 19l-7-7 7-7"/>
++                    </svg>
+                   </button>
+                 </div>
+               </div>
+ 
+-              <!-- Question 2 -->
+-              <div class="quiz-step" id="step-2">
++              <!-- Question Step 2 -->
++              <div class="quiz-step" id="quiz-step-2">
+                 <h3>╪▒┘å┌» ┘╛┘ê╪│╪¬ ╪«┘ê╪» ╪▒╪º ┌å┌»┘ê┘å┘ç ╪¬┘ê╪╡█î┘ü ┘à█îΓÇî┌⌐┘å█î╪»╪ƒ</h3>
+                 <div class="options-grid">
+-                  <label class="quiz-option">
++                  <label class="option-card-label">
+                     <input type="radio" name="skintone" value="cool" />
+-                    <span class="option-card">╪│╪▒╪» (╪¬┘å╪º┌ÿ ╪╡┘ê╪▒╪¬█î/╪ó╪¿█î)</span>
++                    <div class="option-card-inner">
++                      <span>╪│╪▒╪» (╪¬┘å╪º┌ÿ ╪╡┘ê╪▒╪¬█î / ╪ó╪¿█î)</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+-                  <label class="quiz-option">
++                  <label class="option-card-label">
+                     <input type="radio" name="skintone" value="warm" />
+-                    <span class="option-card">┌»╪▒┘à (╪¬┘å╪º┌ÿ ╪▓╪▒╪»/╪▓█î╪¬┘ê┘å█î)</span>
++                    <div class="option-card-inner">
++                      <span>┌»╪▒┘à (╪¬┘å╪º┌ÿ ╪▓╪▒╪» / ╪▓█î╪¬┘ê┘å█î / ┌»┘å╪»┘à█î)</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+-                  <label class="quiz-option">
++                  <label class="option-card-label">
+                     <input type="radio" name="skintone" value="neutral" />
+-                    <span class="option-card">╪«┘å╪½█î (╪¬╪▒┌⌐█î╪¿█î ╪º╪▓ ┘ç╪▒ ╪»┘ê)</span>
++                    <div class="option-card-inner">
++                      <span>╪«┘å╪½█î (╪¬╪▒┌⌐█î╪¿█î)</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+-                  <label class="quiz-option">
++                  <label class="option-card-label">
+                     <input type="radio" name="skintone" value="unsure" />
+-                    <span class="option-card">┘à╪╖┘à╪ª┘å ┘å█î╪│╪¬┘à</span>
++                    <div class="option-card-inner">
++                      <span>┘à╪╖┘à╪ª┘å ┘å█î╪│╪¬┘à (┘å█î╪º╪▓ ╪¿┘ç ┘à╪┤╪º┘ê╪▒┘ç)</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+                 </div>
+-                <div class="quiz-actions">
+-                  <button type="button" class="btn btn-outline prev-btn">
+-                    ╪¿╪º╪▓┌»╪┤╪¬
+-                  </button>
+-                  <button
+-                    type="button"
+-                    class="btn btn-primary next-btn"
+-                    disabled
+-                  >
++                <div class="quiz-nav">
++                  <button class="btn btn-secondary quiz-prev-btn">╪¿╪º╪▓┌»╪┤╪¬</button>
++                  <button class="btn btn-primary quiz-next-btn" disabled>
+                     ┘à╪▒╪¡┘ä┘ç ╪¿╪╣╪»
++                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                      <path d="M19 12H5M12 19l-7-7 7-7"/>
++                    </svg>
+                   </button>
+                 </div>
+               </div>
+ 
+-              <!-- Question 3 -->
+-              <div class="quiz-step" id="step-3">
+-                <h3>╪▒┘ê╪¬█î┘å ╪▒┘ê╪▓╪º┘å┘ç ╪º╪│╪¬╪º█î┘ä ╪┤┘à╪º ┌å┌»┘ê┘å┘ç ╪º╪│╪¬╪ƒ</h3>
++              <!-- Question Step 3 -->
++              <div class="quiz-step" id="quiz-step-3">
++                <h3>╪▓┘à╪º┘å ╪▒┘ê╪▓╪º┘å┘ç ╪┤┘à╪º ╪¿╪▒╪º█î ╪▒╪│█î╪»┌»█î ╪¿┘ç ╪º╪│╪¬╪º█î┘ä ┘à┘ê ┌å┘é╪»╪▒ ╪º╪│╪¬╪ƒ</h3>
+                 <div class="options-grid">
+-                  <label class="quiz-option">
++                  <label class="option-card-label">
+                     <input type="radio" name="routine" value="low" />
+-                    <span class="option-card"
+-                      >┘å█î╪º╪▓ ╪¿┘ç ┘à╪▒╪º┘é╪¿╪¬ ┌⌐┘à (╪┤╪│╪¬╪┤┘ê ┘ê ╪▒┘ü╪¬┘å)</span
+-                    >
++                    <div class="option-card-inner">
++                      <span>┌⌐┘à╪¬╪▒ ╪º╪▓ █▒█░ ╪»┘é█î┘é┘ç (┘å█î╪º╪▓ ╪¿┘ç ┘à╪▒╪º┘é╪¿╪¬ ╪ó╪│╪º┘å)</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+-                  <label class="quiz-option">
++                  <label class="option-card-label">
+                     <input type="radio" name="routine" value="medium" />
+-                    <span class="option-card"
+-                      >┘à╪¬┘ê╪│╪╖ (█▒█╡ ╪¬╪º █│█░ ╪»┘é█î┘é┘ç ╪»╪▒ ╪▒┘ê╪▓)</span
+-                    >
++                    <div class="option-card-inner">
++                      <span>█▒█╡ ╪¬╪º █│█░ ╪»┘é█î┘é┘ç ╪»╪▒ ╪▒┘ê╪▓</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+-                  <label class="quiz-option">
++                  <label class="option-card-label">
+                     <input type="radio" name="routine" value="high" />
+-                    <span class="option-card"
+-                      >┘╛╪▒ ╪▓╪▒┘é ┘ê ╪¿╪▒┘é (╪╣╪º╪┤┘é ╪º╪│╪¬╪º█î┘ä ┌⌐╪▒╪»┘å ┘ç╪│╪¬┘à!)</span
+-                    >
++                    <div class="option-card-inner">
++                      <span>╪╣┘ä╪º┘é┘çΓÇî┘à┘å╪» ╪¿┘ç ╪º╪│╪¬╪º█î┘ä ┌⌐╪▒╪»┘å ╪▒┘ê╪▓╪º┘å┘ç</span>
++                      <div class="check-icon">Γ£ô</div>
++                    </div>
+                   </label>
+                 </div>
+-                <div class="quiz-actions">
+-                  <button type="button" class="btn btn-outline prev-btn">
+-                    ╪¿╪º╪▓┌»╪┤╪¬
+-                  </button>
+-                  <button
+-                    type="button"
+-                    class="btn btn-primary next-btn"
+-                    disabled
+-                  >
+-                    ┘à╪▒╪¡┘ä┘ç ╪¿╪╣╪»
++                <div class="quiz-nav">
++                  <button class="btn btn-secondary quiz-prev-btn">╪¿╪º╪▓┌»╪┤╪¬</button>
++                  <button class="btn btn-primary quiz-next-btn" disabled>
++                    ┘à╪┤╪º┘ç╪»┘ç ╪¬╪¡┘ä█î┘ä ┘å┘ç╪º█î█î
+                   </button>
+                 </div>
+               </div>
+ 
+-              <!-- Lead Capture Form -->
+-              <div class="quiz-step" id="step-lead">
+-                <div class="lead-capture-header">
+-                  <h3>┘å╪¬█î╪¼┘ç ╪º█î╪»┘çΓÇî╪ó┘ä ╪┤┘à╪º ╪ó┘à╪º╪»┘ç ╪º╪│╪¬!</h3>
+-                  <p>┘╛█î╪┤┘å┘ç╪º╪» ╪º╪│╪¬╪º█î┘ä ╪º╪«╪¬╪╡╪º╪╡█î ╪┤┘à╪º ╪▒╪º ┌⌐╪¼╪º ╪º╪▒╪│╪º┘ä ┌⌐┘å█î┘à╪ƒ</p>
++              <!-- Lead Capture Form Step -->
++              <div class="quiz-step" id="quiz-step-lead">
++                <div style="text-align: center; margin-bottom: 2rem;">
++                  <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">╪¬╪¡┘ä█î┘ä ╪º╪«╪¬╪╡╪º╪╡█î ╪┤┘à╪º ╪ó┘à╪º╪»┘ç ╪º╪│╪¬!</h3>
++                  <p style="color: var(--clr-text-secondary);">╪¼┘ç╪¬ ┘å┘à╪º█î╪┤ ╪¬╪¡┘ä█î┘ä ┘ê ╪▒╪▓╪▒┘ê ┌⌐╪» ╪¬╪«┘ü█î┘ü ┘ê█î┌ÿ┘ç╪î ╪º╪╖┘ä╪º╪╣╪º╪¬ ╪▓█î╪▒ ╪▒╪º ┘ê╪º╪▒╪» ┌⌐┘å█î╪».</p>
+                 </div>
+-                <form id="lead-form" class="lead-form">
++                <form id="quiz-lead-form" class="lead-form-grid">
+                   <div class="form-group">
+-                    <label for="first-name">┘å╪º┘à</label>
+-                    <input
+-                      type="text"
+-                      id="first-name"
+-                      name="firstName"
+-                      required
+-                      placeholder="┘à╪½╪º┘ä: ╪│╪º╪▒╪º"
+-                    />
++                    <label for="quiz-name">┘å╪º┘à ┘ê ┘å╪º┘à ╪«╪º┘å┘ê╪º╪»┌»█î</label>
++                    <input type="text" id="quiz-name" class="form-input" required placeholder="┘à╪½╪º┘ä: ╪│╪º╪▒╪º ┘à╪¡┘à╪»█î" />
+                   </div>
+                   <div class="form-group">
+-                    <label for="phone-number">╪┤┘à╪º╪▒┘ç ╪¬┘à╪º╪│</label>
+-                    <input
+-                      type="tel"
+-                      id="phone-number"
+-                      name="phone"
+-                      required
+-                      placeholder="█░█╣█▒█▓█│█┤█╡█╢█╖█╕█╣"
+-                      dir="ltr"
+-                      style="text-align: right"
+-                    />
++                    <label for="quiz-phone">╪┤┘à╪º╪▒┘ç ┘ç┘à╪▒╪º┘ç</label>
++                    <input type="tel" id="quiz-phone" class="form-input" required placeholder="█░█╣█▒█▓█│█┤█╡█╢█╖█╕█╣" dir="ltr" style="text-align: right;" />
+                   </div>
+-                  <button
+-                    type="submit"
+-                    class="btn btn-primary btn-full glow-effect"
+-                  >
+-                    ┘å╪¬╪º█î╪¼ ╪▒╪º ┘ç┘à█î┘å ╪º┘ä╪º┘å ┘å╪┤╪º┘å ╪¿╪»┘ç
++                  <button type="submit" class="btn btn-primary btn-large w-full" style="margin-top: 1rem;">
++                    ┘à╪┤╪º┘ç╪»┘ç ┘╛█î╪┤┘å┘ç╪º╪» ┘ê ╪»╪▒█î╪º┘ü╪¬ ┌⌐╪» ╪¬╪«┘ü█î┘ü █▓█░┘¬
+                   </button>
+-                  <p class="privacy-note">
+-                    ┘à╪º ╪¿┘ç ╪¡╪▒█î┘à ╪«╪╡┘ê╪╡█î ╪┤┘à╪º ╪º╪¡╪¬╪▒╪º┘à ┘à█îΓÇî┌»╪░╪º╪▒█î┘à. ╪¿╪»┘ê┘å ╪º╪│┘╛┘à.
+-                  </p>
+                 </form>
+               </div>
+             </div>
+           </div>
+         </div>
+-      </div>
+-    </section>
++      </section>
+ 
+-    <!-- Personalized Result & Special Offer (Hidden by default) -->
+-    <section class="results-section hidden" id="results-section">
+-      <div class="container">
+-        <div class="results-container">
+-          <div class="results-header text-center">
+-            <h2>
+-              ╪º█î┘å ┘ç┘à ╪º╪│╪¬╪º█î┘ä ╪«╪º╪╡ ╪┤┘à╪º╪î <span id="user-name-display">╪▓█î╪¿╪º</span>!
++      <!-- Personalized Results & Countdown Section (Hidden by Default) -->
++      <section class="results-section hidden" id="results-section">
++        <div class="container">
++          <div class="results-header">
++            <div class="section-tag">
++              <span class="dot"></span>
++              ┘╛█î╪┤┘å┘ç╪º╪» ╪º╪«╪¬╪╡╪º╪╡█î
++            </div>
++            <h2 class="section-title">
++              ╪¬╪¡┘ä█î┘ä ╪º╪│╪¬╪º█î┘ä ╪┤┘à╪º ╪ó┘à╪º╪»┘ç ╪º╪│╪¬╪î <span class="gradient-text" id="user-name-display">╪▓█î╪¿╪º</span>!
+             </h2>
+-            <p>╪¿╪▒ ╪º╪│╪º╪│ ┘╛╪▒┘ê┘ü╪º█î┘ä ╪┤┘à╪º╪î ┘à╪º █î┌⌐ ╪▒┘ê█î┌⌐╪▒╪» ╪º╪«╪¬╪╡╪º╪╡█î ╪▒╪º ┘╛█î╪┤┘å┘ç╪º╪» ┘à█îΓÇî╪»┘ç█î┘à.</p>
++            <p class="section-subtitle">
++              ╪¿╪▒ ╪º╪│╪º╪│ ┘╛╪º╪│╪«ΓÇî┘ç╪º█î ╪┤┘à╪º╪î ╪º█î┘å ┘ü╪▒┘à┘ê┘ä ╪º╪«╪¬╪╡╪º╪╡█î ╪▒┘å┌» ┘à┘ê ┘ê ╪ó╪▒╪º█î╪┤ ╪▒╪º ╪¿╪▒╪º█î ╪┤┘à╪º ┘╛█î╪┤┘å┘ç╪º╪» ┘à█îΓÇî┌⌐┘å█î┘à:
++            </p>
+           </div>
+ 
+           <div class="results-grid">
+-            <div class="result-card">
+-              <img
+-                src="images/hair-color-recommendation.jpg"
+-                alt="╪▒┘å┌» ┘à┘ê█î ┘╛█î╪┤┘å┘ç╪º╪»█î"
+-                class="result-img"
+-              />
+-              <div class="result-info">
+-                <span class="result-badge">┘╛╪▒┘ê┘ü╪º█î┘ä ┘à┘ê</span>
+-                <h3>╪▒┘å┌» ┘à┘ê█î ╪»╪º█î┘à┘å╪┤┘å╪º┘ä ┘ê ╪╖╪¿█î╪╣█î</h3>
++            <div class="glass-card result-card">
++              <div class="result-img-wrapper">
++                <img src="images/hair-color-recommendation.jpg" alt="╪▒┘å┌» ┘à┘ê█î ┘╛█î╪┤┘å┘ç╪º╪»█î" />
++              </div>
++              <div class="result-body">
++                <span class="result-tag">┘╛╪▒┘ê┘ü╪º█î┘ä ┘à┘ê</span>
++                <h3>╪¿╪º┘ä█î╪º┌ÿ ╪»╪º█î┘à┘å╪┤┘å╪º┘ä ┌å╪º┘à┘╛╪º█î┘å ┘ê ┌⌐╪º╪▒╪º┘à┘ä</h3>
+                 <p>
+-                  ╪¿╪▒╪º█î ╪¬┌⌐┘à█î┘ä ╪▒┘å┌» ┘╛┘ê╪│╪¬ ┘ê ╪¬┘å╪º╪│╪¿ ╪¿╪º ╪▒┘ê╪¬█î┘å ╪º╪│╪¬╪º█î┘ä ╪┤┘à╪º╪î █î┌⌐ ╪¿╪º┘ä█î╪º┌ÿ
+-                  ╪»╪º█î┘à┘å╪┤┘å╪º┘ä ┘à┘ä╪º█î┘à╪î ╪º╪¡╪│╪º╪│ ┘ä┘ê┌⌐╪│ ┘ê ╪¿╪»┘ê┘å ╪»╪▒╪»╪│╪▒█î ╪¿╪º ╪¡╪»╪º┘é┘ä ┘å█î╪º╪▓ ╪¿┘ç
+-                  ╪¬╪▒┘à█î┘à ╪¿┘ç ╪┤┘à╪º ┘à█îΓÇî╪»┘ç╪».
++                  ╪¿┘ç╪¬╪▒█î┘å ┌»╪▓█î┘å┘ç ┘à╪¬┘å╪º╪│╪¿ ╪¿╪º ╪¬┘å╪º┌ÿ ┘╛┘ê╪│╪¬ ┘ê ╪▒┘ê╪¬█î┘å ╪▒┘ê╪▓╪º┘å┘ç ╪┤┘à╪º. ╪º█î╪¼╪º╪» ╪«╪╖┘ê╪╖ ╪▒┘ê╪┤┘å ┘à╪º█î┘ä ╪¿┘ç ╪¿┌ÿ-╪╖┘ä╪º█î█î ┌⌐┘ç ┘å█î╪º╪▓ ╪¿┘ç ╪¬╪▒┘à█î┘à ┘à╪»╪º┘ê┘à ╪▒█î╪┤┘ç ┘å╪»╪º╪▒╪» ┘ê ╪┤╪º╪»╪º╪¿█î ╪¿█îΓÇî┘╛╪º█î╪º┘å█î ╪¿┘ç ┌å┘ç╪▒┘ç ┘à█îΓÇî╪»┘ç╪».
+                 </p>
+               </div>
+             </div>
+ 
+-            <div class="result-card">
+-              <img
+-                src="images/makeup-recommendation.jpg"
+-                alt="┘à█î┌⌐╪º┘╛ ┘╛█î╪┤┘å┘ç╪º╪»█î"
+-                class="result-img"
+-              />
+-              <div class="result-info">
+-                <span class="result-badge">┘╛╪▒┘ê┘ü╪º█î┘ä ┘à█î┌⌐╪º┘╛</span>
+-                <h3>╪»╪▒╪«╪┤╪┤ ┘à┘ä╪º█î┘à ┘ê ╪¼╪░╪º╪¿</h3>
++            <div class="glass-card result-card">
++              <div class="result-img-wrapper">
++                <img src="images/makeup-recommendation.jpg" alt="┘à█î┌⌐╪º┘╛ ┘╛█î╪┤┘å┘ç╪º╪»█î" />
++              </div>
++              <div class="result-body">
++                <span class="result-tag">┘╛╪▒┘ê┘ü╪º█î┘ä ┘à█î┌⌐╪º┘╛</span>
++                <h3>┘à█î┌⌐╪º┘╛ ┘å┘ê╪» - ┌»┘ä┘ê█î█î ╪¿╪º ┘╛╪º█î┘ç ╪┤╪¿┘å┘à█î (Dewy)</h3>
+                 <p>
+-                  ╪¿╪▒╪¼╪│╪¬┘ç ┌⌐╪▒╪»┘å ┘ê█î┌ÿ┌»█îΓÇî┘ç╪º█î ╪╖╪¿█î╪╣█î ╪┤┘à╪º ╪¿╪º █î┌⌐ ┘╛╪º█î┘ç ╪»╪▒╪«╪┤╪º┘å ┘ê ╪¬┘å╪º┌ÿ┘ç╪º█î
+-                  ╪«┘å╪½█î ┘ê ┘à┘ä╪º█î┘à ╪¿╪▒╪º█î ┌å╪┤┘àΓÇî┘ç╪º╪î ╪º█î╪»┘çΓÇî╪ó┘ä ╪¿╪▒╪º█î ╪╣┌⌐╪│ΓÇî┘ç╪º ┘ê ╪▓┘å╪»┌»█î ┘ê╪º┘é╪╣█î.
++                  ╪¿╪▒╪¼╪│╪¬┘ç ┌⌐╪▒╪»┘å ╪▓█î╪¿╪º█î█î ╪╖╪¿█î╪╣█î ┌å╪┤┘à╪º┘å ╪¿╪º ╪¬┘å╪º┌ÿ┘ç╪º█î ┌»╪▒┘à ┘ê ╪º█î╪¼╪º╪» ┘╛┘ê╪┤╪┤ ┘à╪«┘à┘ä█î ╪│╪¿┌⌐█î ┌⌐┘ç ╪»╪▒ ╪╣┌⌐╪º╪│█î ┘ê ┘à╪¡█î╪╖ ┘ê╪º┘é╪╣█î ╪¼╪░╪º╪¿█î╪¬ ┘ü┘ê┘éΓÇî╪º┘ä╪╣╪º╪»┘çΓÇî╪º█î ╪¿┘ç ╪┤┘à╪º ┘à█îΓÇî╪¿╪«╪┤╪».
+                 </p>
+               </div>
+             </div>
+           </div>
+ 
+-          <!-- Special Offer -->
++          <!-- Countdown Special Offer Banner -->
+           <div class="offer-banner">
+             <div class="offer-content">
+-              <h3>┘╛█î╪┤┘å┘ç╪º╪» ┘ê█î┌ÿ┘ç ╪«┘ê╪┤ΓÇî╪ó┘à╪»┌»┘ê█î█î</h3>
+-              <p>
+-                ╪¬╪║█î█î╪▒╪º╪¬ ╪º╪«╪¬╪╡╪º╪╡█î ╪«┘ê╪» ╪▒╪º ╪»╪▒ █┤█╕ ╪│╪º╪╣╪¬ ╪ó█î┘å╪»┘ç ╪▒╪▓╪▒┘ê ┌⌐┘å█î╪» ┘ê ╪»╪▒█î╪º┘ü╪¬ ┌⌐┘å█î╪»:
+-              </p>
+-              <h2 class="offer-highlight">█▓█░┘¬ ╪¬╪«┘ü█î┘ü ╪¿╪▒╪º█î ╪º┘ê┘ä█î┘å ┘å┘ê╪¿╪¬ ╪┤┘à╪º</h2>
+-              <ul class="offer-perks">
+-                <li>Γ£ô ╪º╪▒╪¬┘é╪º█î ╪▒╪º█î┌»╪º┘å ╪¿┘ç ╪»╪▒┘à╪º┘å ┘ê ╪º╪¡█î╪º█î ┘à┘ê</li>
+-                <li>Γ£ô ╪▒╪º┘ç┘å┘à╪º█î ╪º╪«╪¬╪╡╪º╪╡█î ┘à█î┌⌐╪º┘╛</li>
++              <h3>┘ç╪»█î┘ç ╪«┘ê╪┤ΓÇî╪ó┘à╪»┌»┘ê█î█î ╪º╪«╪¬╪╡╪º╪╡█î ╪┤┘à╪º</h3>
++              <p>╪¿╪º ╪▒╪▓╪▒┘ê ┘å┘ê╪¿╪¬ ╪»╪▒ █┤█╕ ╪│╪º╪╣╪¬ ╪ó█î┘å╪»┘ç╪î ╪º╪▓ ┘à╪▓╪º█î╪º█î ╪▓█î╪▒ ╪¿╪▒╪«┘ê╪▒╪»╪º╪▒ ╪┤┘ê█î╪»:</p>
++              <ul class="offer-perks-list">
++                <li>
++                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                    <polyline points="20 6 9 17 4 12"></polyline>
++                  </svg>
++                  █▓█░┘¬ ╪¬╪«┘ü█î┘ü ╪▒┘ê█î ╪¬┘à╪º┘à█î ╪«╪»┘à╪º╪¬ ╪¿╪º┘ä█î╪º┌ÿ ┘ê ┘à█î┌⌐╪º┘╛
++                </li>
++                <li>
++                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                    <polyline points="20 6 9 17 4 12"></polyline>
++                  </svg>
++                  █î┌⌐ ╪¼┘ä╪│┘ç ╪▒╪º█î┌»╪º┘å ┘ê█î╪¬╪º┘à█î┘å┘ç ┘ê ╪º╪¡█î╪º█î ╪│╪º┘é┘ç ┘à┘ê
++                </li>
+               </ul>
++              <button class="btn btn-primary btn-large open-booking-modal">
++                ╪»╪▒█î╪º┘ü╪¬ █▓█░┘¬ ╪¬╪«┘ü█î┘ü ┘ê ╪▒╪▓╪▒┘ê ┘å┘ê╪¿╪¬
++              </button>
+             </div>
+-            <div class="offer-timer">
+-              <p class="timer-label">╪º╪╣╪¬╪¿╪º╪▒ ┘╛█î╪┤┘å┘ç╪º╪»:</p>
+-              <div class="countdown" id="countdown">
+-                <div class="time-box">
+-                  <span class="time-val" id="hours">47</span>
+-                  <span class="time-text">╪│╪º╪╣╪¬</span>
++
++            <div class="timer-box">
++              <div class="timer-title">┘à┘ç┘ä╪¬ ╪º╪│╪¬┘ü╪º╪»┘ç ╪º╪▓ ╪¬╪«┘ü█î┘ü</div>
++              <div class="countdown-digits">
++                <div class="digit-unit">
++                  <span class="digit-val" id="hours">47</span>
++                  <span class="digit-label">╪│╪º╪╣╪¬</span>
+                 </div>
+-                <span class="time-sep">:</span>
+-                <div class="time-box">
+-                  <span class="time-val" id="minutes">59</span>
+-                  <span class="time-text">╪»┘é█î┘é┘ç</span>
++                <span class="digit-sep">:</span>
++                <div class="digit-unit">
++                  <span class="digit-val" id="minutes">59</span>
++                  <span class="digit-label">╪»┘é█î┘é┘ç</span>
+                 </div>
+-                <span class="time-sep">:</span>
+-                <div class="time-box">
+-                  <span class="time-val" id="seconds">59</span>
+-                  <span class="time-text">╪½╪º┘å█î┘ç</span>
++                <span class="digit-sep">:</span>
++                <div class="digit-unit">
++                  <span class="digit-val" id="seconds">59</span>
++                  <span class="digit-label">╪½╪º┘å█î┘ç</span>
+                 </div>
+               </div>
+-              <a
+-                href="#booking"
+-                class="btn btn-primary btn-large pulse-animation"
+-                >╪»╪▒█î╪º┘ü╪¬ █▓█░┘¬ ╪¬╪«┘ü█î┘ü ┘à┘å</a
+-              >
++              <div style="font-size: 0.85rem; color: var(--clr-gold);">┌⌐╪» ╪¬╪«┘ü█î┘ü ╪┤┘à╪º: <strong style="letter-spacing: 1px;">SARA2026</strong></div>
+             </div>
+           </div>
+         </div>
+-      </div>
+-    </section>
+-
+-    <!-- Social Proof / Portfolio -->
+-    <section class="portfolio" id="portfolio">
+-      <div class="container">
+-        <div class="section-header text-center animate-on-scroll">
+-          <h2>┘å╪¬╪º█î╪¼ ┘ê╪º┘é╪╣█î. ╪º╪╣╪¬┘à╪º╪» ╪¿┘ç ┘å┘ü╪│ ┘ê╪º┘é╪╣█î.</h2>
+-          <p>
+-            ╪¿┘ç ┘ç╪▓╪º╪▒╪º┘å ╪▓┘å█î ╪¿┘╛█î┘ê┘å╪»█î╪» ┌⌐┘ç ╪╕╪º┘ç╪▒ ╪«┘ê╪» ╪▒╪º ╪¿╪º ╪│╪º╪▒╪º ┘å╪¼┘ü█î ╪¬╪║█î█î╪▒ ╪»╪º╪»┘çΓÇî╪º┘å╪».
+-          </p>
+-        </div>
++      </section>
+ 
+-        <div class="masonry-gallery animate-on-scroll">
+-          <div class="gallery-item">
+-            <img src="images/before-after-02.jpg" alt="┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒ █▒" />
++      <!-- Portfolio & Social Proof Section -->
++      <section class="portfolio-section" id="portfolio">
++        <div class="container">
++          <div class="section-header reveal">
++            <div class="section-tag">
++              <span class="dot"></span>
++              ┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒┘ç╪º█î ┘à╪º┘å╪»┌»╪º╪▒
++            </div>
++            <h2 class="section-title">┘å╪¬╪º█î╪¼ ┘ê╪º┘é╪╣█î╪î ╪▒╪╢╪º█î╪¬ ┘ê╪º┘é╪╣█î</h2>
++            <p class="section-subtitle">┘å┌»╪º┘ç█î ╪¿┘ç ╪┤╪º┘ç┌⌐╪º╪▒┘ç╪º█î ╪▓█î╪¿╪º█î█î ╪«┘ä┘é ╪┤╪»┘ç ╪»╪▒ ╪│╪º┘ä┘å ╪│╪º╪▒╪º ┘å╪¼┘ü█î.</p>
+           </div>
+-          <div class="gallery-item">
+-            <img src="images/before-after-03.jpg" alt="┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒ █▓" />
++
++          <div class="portfolio-filter reveal">
++            <button class="filter-btn active" data-filter="all">┘ç┘à┘ç ┌⌐╪º╪▒┘ç╪º</button>
++            <button class="filter-btn" data-filter="balayage">╪¿╪º┘ä█î╪º┌ÿ ┘ê ╪▒┘å┌»</button>
++            <button class="filter-btn" data-filter="bridal">┘à█î┌⌐╪º┘╛ ╪╣╪▒┘ê╪│</button>
++            <button class="filter-btn" data-filter="repair">╪º╪¡█î╪º ┘ê ╪¬╪▒┘à█î┘à</button>
+           </div>
+-          <div class="gallery-item testimonial-item">
+-            <div class="testimonial-card">
+-              <div class="stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</div>
+-              <p>
+-                "╪│╪º╪▒╪º ╪▓╪▒╪»█î ┘à┘ê┘ç╪º█î ┘à┘å ╪▒╪º ┌⌐╪º┘à┘ä╪º ╪¿╪▒╪╖╪▒┘ü ┌⌐╪▒╪»! ╪│╪º┘ä┘å ╪¡╪│ █î┌⌐ ┘ç╪¬┘ä █╡ ╪│╪¬╪º╪▒┘ç
+-                ╪▒╪º ╪»╪º╪▒╪» ┘ê ┘å╪¬╪º█î╪¼ ╪«┘ê╪» ┌»┘ê█î╪º█î ┘ç┘à┘ç ┌å█î╪▓ ╪º╪│╪¬."
+-              </p>
+-              <span class="author">- ╪º┘ä┘å╪º╪▓ ╪▒.</span>
++
++          <div class="portfolio-gallery reveal">
++            <div class="gallery-card" data-category="balayage">
++              <img src="images/before-after-03.jpg" alt="┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒ ╪¿╪º┘ä█î╪º┌ÿ" />
++              <div class="gallery-card-overlay">
++                <h4>╪¿╪º┘ä█î╪º┌ÿ ╪¿┌ÿ ╪╖┘ä╪º█î█î</h4>
++                <span>╪¬┌⌐┘å█î┌⌐ ╪ó┘à╪¿╪▒┘ç ╪¿╪»┘ê┘å ┘à╪▒╪▓</span>
++              </div>
++            </div>
++            <div class="gallery-card" data-category="bridal">
++              <img src="images/before-after-04.jpg" alt="┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒ ┘à█î┌⌐╪º┘╛" />
++              <div class="gallery-card-overlay">
++                <h4>┘à█î┌⌐╪º┘╛ ╪╣╪▒┘ê╪│ ┌⌐┘ä╪º╪│█î┌⌐</h4>
++                <span>┘à╪º┘å╪»┌»╪º╪▒█î █▓█┤ ╪│╪º╪╣╪¬┘ç</span>
++              </div>
++            </div>
++            <div class="gallery-card" data-category="balayage">
++              <img src="images/before-after-05.jpg" alt="┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒ ╪¿╪º┘ä█î╪º┌ÿ" />
++              <div class="gallery-card-overlay">
++                <h4>╪¿╪º┘ä█î╪º┌ÿ ╪│┘ê╪ª█î╪»█î ┘ê ┘à╪▒┘ê╪º╪▒█î╪»█î</h4>
++                <span>╪▒┘ê╪┤┘å█î ┌⌐╪º┘à┘ä ╪¿╪»┘ê┘å ╪ó╪│█î╪¿</span>
++              </div>
++            </div>
++            <div class="gallery-card" data-category="repair">
++              <img src="images/before-after-06.jpg" alt="┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒ ┘╛╪▒┘ê╪¬╪ª█î┘å ╪¬╪▒╪º┘╛█î" />
++              <div class="gallery-card-overlay">
++                <h4>┘╛╪▒┘ê╪¬╪ª█î┘åΓÇî╪¬╪▒╪º┘╛█î ┘ê ╪╡╪º┘ü█î</h4>
++                <span>╪º╪¡█î╪º█î ┌⌐╪º┘à┘ä ╪│╪º┘é┘çΓÇî┘ç╪º</span>
++              </div>
++            </div>
++            <div class="gallery-card" data-category="bridal">
++              <img src="images/hair-color-recommendation.jpg" alt="┘à█î┌⌐╪º┘╛ ┘å┘ê╪»" />
++              <div class="gallery-card-overlay">
++                <h4>┘à█î┌⌐╪º┘╛ ┘ä╪º█î╪¬ ╪º╪▒┘ê┘╛╪º</h4>
++                <span>╪╖╪¿█î╪╣█î ┘ê ╪»╪▒╪«╪┤╪º┘å</span>
++              </div>
++            </div>
++            <div class="gallery-card" data-category="balayage">
++              <img src="images/before-after-01.jpg" alt="╪¿╪º┘ä█î╪º┌ÿ ╪┤┌⌐┘ä╪º╪¬█î" />
++              <div class="gallery-card-overlay">
++                <h4>╪¿╪º┘ä█î╪º┌ÿ ┘å╪│┌⌐╪º┘ü┘çΓÇî╪º█î ┌⌐╪º╪▒╪º┘à┘ä█î</h4>
++                <span>┘à┘å╪º╪│╪¿ ╪¬┘å╪º┌ÿ ┘╛┘ê╪│╪¬ ┌»┘å╪»┘à█î</span>
++              </div>
+             </div>
+           </div>
+-          <div class="gallery-item">
+-            <img src="images/before-after-04.jpg" alt="┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒ █│" />
+-          </div>
+-          <div class="gallery-item">
+-            <img src="images/before-after-05.jpg" alt="┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒ █┤" />
++
++          <!-- Testimonials Section -->
++          <div class="testimonials-grid reveal">
++            <div class="glass-card testimonial-card">
++              <div>
++                <div class="testimonial-stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</div>
++                <p class="testimonial-text">
++                  "╪│╪º╪▒╪º ╪╣╪▓█î╪▓ ╪▓╪▒╪»█î ┘à┘ê┘ç╪º█î ┘à┘å ╪▒┘ê ┌⌐┘ç ╪¡╪º╪╡┘ä ╪º╪┤╪¬╪¿╪º┘ç ╪│╪º┘ä┘å ┘é╪¿┘ä█î ╪¿┘ê╪» ┌⌐┘ä╪º┘ï ╪º╪╡┘ä╪º╪¡ ┌⌐╪▒╪»! ┘å╪¬█î╪¼┘ç ┘ü┘ê┘éΓÇî╪º┘ä╪╣╪º╪»┘ç ╪┤╪» ┘ê ╪º╪╡┘ä╪º┘ï ┘à┘ê┘ç╪º┘à ┘å╪│┘ê╪«╪¬."
++                </p>
++              </div>
++              <div class="testimonial-author">
++                <div class="author-avatar">╪º┘ä</div>
++                <div class="author-info">
++                  <h4>╪º┘ä┘å╪º╪▓ ╪▒╪╢╪º█î█î</h4>
++                  <span>┘à╪┤╪¬╪▒█î ╪¿╪º┘ä█î╪º┌ÿ ┘ä┘ê┌⌐╪│</span>
++                </div>
++              </div>
++            </div>
++
++            <div class="glass-card testimonial-card">
++              <div>
++                <div class="testimonial-stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</div>
++                <p class="testimonial-text">
++                  "╪¿╪▒╪º█î ┘à█î┌⌐╪º┘╛ ╪╣╪▒┘ê╪│█î┘à ╪¿┘ç ╪│╪º╪▒╪º ╪º╪╣╪¬┘à╪º╪» ┌⌐╪▒╪»┘à ┘ê ╪¿┘ç╪¬╪▒█î┘å ╪¬╪╡┘à█î┘à ╪▓┘å╪»┌»█î┘à ╪¿┘ê╪»! ╪¬╪º ╪ó╪«╪▒ ╪┤╪¿ ╪ó╪▒╪º█î╪┤┘à ╪ó█î┘å┘ç ╪¿┘ê╪» ┘ê ╪¬┘ê█î ╪╣┌⌐╪│ΓÇî┘ç╪º ╪╣╪º┘ä█î ╪┤╪»."
++                </p>
++              </div>
++              <div class="testimonial-author">
++                <div class="author-avatar">┘à</div>
++                <div class="author-info">
++                  <h4>┘à╪▒█î┘à ┌⌐╪º╪╕┘à█î</h4>
++                  <span>╪╣╪▒┘ê╪│ ╪│╪º┘ä┘å</span>
++                </div>
++              </div>
++            </div>
++
++            <div class="glass-card testimonial-card">
++              <div>
++                <div class="testimonial-stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</div>
++                <p class="testimonial-text">
++                  "┘ü╪╢╪º█î ╪│╪º┘ä┘å ┘ü┘ê┘éΓÇî╪º┘ä╪╣╪º╪»┘ç ╪ó╪▒┘ê┘à ┘ê ╪┤█î┌⌐┘ç. ╪¿╪▒╪«┘ê╪▒╪» ┘╛╪▒╪│┘å┘ä ╪╣╪º┘ä█î┘ç ┘ê ╪º╪▓ ╪¿╪▒┘å╪»┘ç╪º█î ╪»╪▒╪¼┘ç █î┌⌐ ╪º╪│╪¬┘ü╪º╪»┘ç ┘à█îΓÇî┌⌐┘å┘å. ┘ê╪º┘é╪╣╪º┘ï ╪º╪▒╪▓╪┤╪┤ ╪▒┘ê ╪»╪º╪▒┘ç."
++                </p>
++              </div>
++              <div class="testimonial-author">
++                <div class="author-avatar">┘╛</div>
++                <div class="author-info">
++                  <h4>┘╛╪▒█î╪│╪º ╪¬┘ç╪º┘à█î</h4>
++                  <span>┘à╪┤╪¬╪▒█î ╪½╪º╪¿╪¬ ╪º╪¡█î╪º█î ┘à┘ê</span>
++                </div>
++              </div>
++            </div>
+           </div>
+-          <div class="gallery-item">
+-            <img src="images/before-after-06.jpg" alt="┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒ █╡" />
++
++          <!-- Trust Badges Bar -->
++          <div class="trust-bar reveal">
++            <div class="trust-item">
++              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
++              </svg>
++              <span>┘à╪│╪¬╪▒ ┌⌐╪º┘ä╪▒█î╪│╪¬ ╪¿█î┘åΓÇî╪º┘ä┘à┘ä┘ä█î</span>
++            </div>
++            <div class="trust-item">
++              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
++              </svg>
++              <span>┘à┘ê╪º╪» █▒█░█░┘¬ ╪º┘ê╪▒╪¼█î┘å╪º┘ä Olaplex & K├⌐rastase</span>
++            </div>
++            <div class="trust-item">
++              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                <circle cx="12" cy="12" r="10"></circle>
++                <polyline points="12 6 12 12 16 14"></polyline>
++              </svg>
++              <span>╪╢┘à╪º┘å╪¬ ┌⌐╪º┘à┘ä ┌⌐█î┘ü█î╪¬ ╪«╪»┘à╪º╪¬</span>
++            </div>
+           </div>
+         </div>
++      </section>
+ 
+-        <!-- Certificates / Trust -->
+-        <div class="trust-badges animate-on-scroll">
+-          <div class="badge-item">
+-            <img src="images/certificate-01.jpg" alt="┘à╪¬╪«╪╡╪╡ ╪º╪▒╪┤╪» ╪▒┘å┌»" />
+-            <span>┘à╪¬╪«╪╡╪╡ ╪º╪▒╪┤╪» ╪▒┘å┌»</span>
+-          </div>
+-          <div class="badge-item">
+-            <img src="images/certificate-02.jpg" alt="┘à╪¬╪«╪╡╪╡ ╪╣╪▒┘ê╪│" />
+-            <span>┘à╪¬╪«╪╡╪╡ ╪╣╪▒┘ê╪│</span>
+-          </div>
+-          <div class="badge-item">
+-            <img src="images/certificate-03.jpg" alt="┘ü┘é╪╖ ╪¿╪▒┘å╪»┘ç╪º█î ┘ä┘ê┌⌐╪│" />
+-            <span>┘ü┘é╪╖ ╪¿╪▒┘å╪»┘ç╪º█î ┘ä┘ê┌⌐╪│</span>
++      <!-- Salon Experience & Amenities Section -->
++      <section class="experience-section" id="salon">
++        <div class="container">
++          <div class="experience-grid">
++            <div class="reveal">
++              <div class="section-tag">
++                <span class="dot"></span>
++                ┘à╪¡█î╪╖ ╪│╪º┘ä┘å
++              </div>
++              <h2 class="section-title">┘ü╪▒╪º╪¬╪▒ ╪º╪▓ █î┌⌐ ┘å┘ê╪¿╪¬ ╪▓█î╪¿╪º█î█î╪¢ █î┌⌐ ╪¬╪¼╪▒╪¿┘ç ╪¿█îΓÇî┘å╪╕█î╪▒</h2>
++              <p class="section-subtitle">
++                ┘à╪¡█î╪╖ ╪│╪º┘ä┘å ╪│╪º╪▒╪º ┘å╪¼┘ü█î ╪¿╪▒ ┘╛╪º█î┘ç ╪ó╪▒╪º┘à╪┤╪î ╪▒╪╣╪º█î╪¬ ╪¿╪º┘ä╪º╪¬╪▒█î┘å ╪º╪│╪¬╪º┘å╪»╪º╪▒╪»┘ç╪º█î ╪¿┘ç╪»╪º╪┤╪¬█î ┘ê ┘╛╪░█î╪▒╪º█î█î VIP ╪╖╪▒╪º╪¡█î ╪┤╪»┘ç ╪º╪│╪¬.
++              </p>
++
++              <ul class="experience-list">
++                <li>
++                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                    <polyline points="20 6 9 17 4 12"></polyline>
++                  </svg>
++                  ┘╛╪░█î╪▒╪º█î█î ╪º╪«╪¬╪╡╪º╪╡█î ┘å┘ê╪┤█î╪»┘å█î ┌»╪▒┘à ┘ê ╪¿╪º╪▒ ╪º╪│┘╛╪▒╪│┘ê█î ╪º█î╪¬╪º┘ä█î╪º█î█î
++                </li>
++                <li>
++                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                    <polyline points="20 6 9 17 4 12"></polyline>
++                  </svg>
++                  ╪│┘ê╪ª█î╪¬ΓÇî┘ç╪º█î ╪«╪╡┘ê╪╡█î VIP ┘ê█î┌ÿ┘ç ╪╣╪▒┘ê╪│ ┘ê ╪«╪»┘à╪º╪¬ ╪º╪«╪¬╪╡╪º╪╡█î
++                </li>
++                <li>
++                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                    <polyline points="20 6 9 17 4 12"></polyline>
++                  </svg>
++                  ╪╡┘å╪»┘ä█îΓÇî┘ç╪º█î ┘à╪º╪│╪º┌ÿ┘ê╪▒ ┘ê ╪│╪▒╪┤┘ê█îΓÇî┘ç╪º█î ╪º╪▒┌»┘ê┘å┘ê┘à█î┌⌐ ┘╛█î╪┤╪▒┘ü╪¬┘ç
++                </li>
++                <li>
++                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                    <polyline points="20 6 9 17 4 12"></polyline>
++                  </svg>
++                  ╪¬┘ç┘ê█î┘ç ┘à╪╖╪¿┘ê╪╣ ┘à╪¼┘ç╪▓ ╪¿┘ç ┘ü█î┘ä╪¬╪▒┘ç╪º█î ╪¬╪╡┘ü█î┘ç ┘ç┘ê╪º█î ┌å┘å╪»┘ä╪º█î┘ç
++                </li>
++              </ul>
++            </div>
++
++            <div class="video-card reveal reveal-delay-2">
++              <img src="images/salon-interior-01.jpg" alt="╪¬╪╡┘ê█î╪▒ ╪¬┘ê╪▒ ╪│╪º┘ä┘å ╪▓█î╪¿╪º█î█î" />
++              <button class="play-button" aria-label="┘╛╪«╪┤ ┘ê█î╪»█î┘ê ╪¬┘ê╪▒ ╪│╪º┘ä┘å">
++                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
++                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
++                </svg>
++              </button>
++            </div>
+           </div>
+         </div>
+-      </div>
+-    </section>
++      </section>
+ 
+-    <!-- Salon Experience -->
+-    <section class="salon-experience" id="salon">
+-      <div class="container">
+-        <div class="experience-grid">
+-          <div class="experience-content animate-on-scroll">
+-            <h2>┘ü╪▒╪º╪¬╪▒ ╪º╪▓ █î┌⌐ ┘å┘ê╪¿╪¬. ╪º█î┘å █î┌⌐ ╪¬╪¼╪▒╪¿┘ç ╪º╪│╪¬.</h2>
+-            <p>
+-              ╪º╪▓ ┘ä╪¡╪╕┘çΓÇî╪º█î ┌⌐┘ç ┘ê╪º╪▒╪» ┘à█îΓÇî╪┤┘ê█î╪»╪î ╪¿╪º ╪┤┘à╪º ╪»╪▒ █î┌⌐ ┘à╪¡█î╪╖ ┘ä┘ê┌⌐╪│ ┌⌐┘ç ╪¿╪▒╪º█î ╪º╪│╪¬╪▒╪º╪¡╪¬
+-              ┘ê ╪ó╪▒╪º┘à╪┤ ╪┤┘à╪º ╪╖╪▒╪º╪¡█î ╪┤╪»┘ç╪î ╪▒┘ü╪¬╪º╪▒ ┘à█îΓÇî╪┤┘ê╪».
+-            </p>
+-            <ul class="experience-list">
+-              <li>┘é┘ç┘ê┘ç ┘à┘à╪¬╪º╪▓ ╪º█î╪¬╪º┘ä█î╪º█î█î ┘ê ┘╛╪░█î╪▒╪º█î█î</li>
+-              <li>╪º█î╪│╪¬┌»╪º┘çΓÇî┘ç╪º█î ╪┤╪│╪¬╪┤┘ê█î ╪º╪▒┌»┘ê┘å┘ê┘à█î┌⌐</li>
+-              <li>┘à╪¡╪╡┘ê┘ä╪º╪¬ ╪»╪▒╪¼┘ç █î┌⌐ ╪º┘ê┘ä╪º┘╛┘ä┌⌐╪│ ┘ê ┌⌐╪▒╪º╪│╪¬╪º╪│</li>
+-              <li>╪│┘ê╪ª█î╪¬ΓÇî┘ç╪º█î ╪«╪╡┘ê╪╡█î VIP</li>
+-            </ul>
++      <!-- FAQ Section -->
++      <section class="faq-section" id="faq">
++        <div class="container">
++          <div class="section-header reveal">
++            <div class="section-tag">
++              <span class="dot"></span>
++              ┘╛╪º╪│╪« ╪¿┘ç ╪│┘ê╪º┘ä╪º╪¬
++            </div>
++            <h2 class="section-title">╪│┘ê╪º┘ä╪º╪¬ ┘à╪¬╪»╪º┘ê┘ä ╪┤┘à╪º</h2>
++            <p class="section-subtitle">┘╛╪º╪│╪« ╪¿┘ç ┘à╪¬╪»╪º┘ê┘äΓÇî╪¬╪▒█î┘å ┘╛╪▒╪│╪┤ΓÇî┘ç╪º ╪»╪▒╪¿╪º╪▒┘ç ╪«╪»┘à╪º╪¬╪î ╪▒╪▓╪▒┘ê ┘ê ╪▓┘à╪º┘åΓÇî╪¿┘å╪»█î.</p>
+           </div>
+-          <div class="experience-visuals animate-on-scroll delay-1">
+-            <div class="video-placeholder">
+-              <img
+-                src="images/salon-interior-01.jpg"
+-                alt="┘à╪¡█î╪╖ ╪│╪º┘ä┘å"
+-                class="salon-img"
+-              />
+-              <button class="play-btn" aria-label="┘╛╪«╪┤ ┘ê█î╪»█î┘ê ╪│╪º┘ä┘å">
+-                <svg
+-                  width="24"
+-                  height="24"
+-                  viewBox="0 0 24 24"
+-                  fill="currentColor"
+-                >
+-                  <path d="M8 5v14l11-7z" />
++
++          <div class="faq-accordion reveal">
++            <div class="glass-card faq-item active">
++              <button class="faq-header">
++                <span>┌å┌»┘ê┘å┘ç ┘à╪╖┘à╪ª┘å ╪┤┘ê┘à ╪¿╪º┘ä█î╪º┌ÿ ╪¿╪º╪╣╪½ ╪ó╪│█î╪¿ ╪¿┘ç ┘à┘ê┘ç╪º█î┘à ┘å┘à█îΓÇî╪┤┘ê╪»╪ƒ</span>
++                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <polyline points="6 9 12 15 18 9"></polyline>
+                 </svg>
+               </button>
++              <div class="faq-content">
++                ╪»╪▒ ╪¬┘à╪º┘à█î ┘ü╪▒╪ó█î┘å╪»┘ç╪º█î ╪»┌⌐┘ä╪▒┘ç ┘ê ╪¿╪º┘ä█î╪º┌ÿ ╪»╪▒ ╪│╪º┘ä┘å ╪│╪º╪▒╪º ┘å╪¼┘ü█î╪î ╪º╪▓ ┘à┘ê╪º╪» ┘ü╪º┘é╪» ╪ó┘à┘ê┘å█î╪º┌⌐ ┘ê ╪º┘ê┘ä╪º┘╛┘ä┌⌐╪│ (Olaplex No.1 & No.2) ╪º╪│╪¬┘ü╪º╪»┘ç ┘à█îΓÇî╪┤┘ê╪» ┌⌐┘ç ┘╛█î┘ê┘å╪»┘ç╪º█î ╪»█îΓÇî╪│┘ê┘ä┘ü█î╪»█î ┘à┘ê ╪▒╪º ╪¡█î┘å ╪▒┘ê╪┤┘å ╪┤╪»┘å ┘à╪¡╪º┘ü╪╕╪¬ ┘ê ╪¿╪º╪▓╪│╪º╪▓█î ┘à█îΓÇî┌⌐┘å╪».
++              </div>
+             </div>
+-            <div class="salon-images-small">
+-              <img src="images/salon-interior-02.jpg" alt="╪º█î╪│╪¬┌»╪º┘ç ╪º╪│╪¬╪º█î┘ä" />
+-              <img src="images/work-process-01.jpg" alt="┘ü╪▒╪ó█î┘å╪» ╪▒┘å┌» ┘à┘ê" />
++
++            <div class="glass-card faq-item">
++              <button class="faq-header">
++                <span>┌å┘ç ┘à╪»╪¬ ┘é╪¿┘ä ╪º╪▓ ┘à╪▒╪º╪│┘à ╪╣╪▒┘ê╪│█î ╪¿╪º█î╪» ┘å┘ê╪¿╪¬ ┘à█î┌⌐╪º┘╛ ╪▒╪º ┘å┘ç╪º█î█î ┌⌐┘å┘à╪ƒ</span>
++                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <polyline points="6 9 12 15 18 9"></polyline>
++                </svg>
++              </button>
++              <div class="faq-content">
++                ┘╛█î╪┤┘å┘ç╪º╪» ┘à█îΓÇî╪┤┘ê╪» ╪¡╪»╪º┘é┘ä █▒ ╪¬╪º █│ ┘à╪º┘ç ┘é╪¿┘ä ╪º╪▓ ╪¬╪º╪▒█î╪« ┘à╪▒╪º╪│┘à ┘å╪│╪¿╪¬ ╪¿┘ç ╪▒╪▓╪▒┘ê ╪¬╪º╪▒█î╪« ╪º┘é╪»╪º┘à ┘ü╪▒┘à╪º█î█î╪». ┘╛╪│ ╪º╪▓ ╪½╪¿╪¬ ╪▒╪▓╪▒┘ê ╪º┘ê┘ä█î╪î █î┌⌐ ╪¼┘ä╪│┘ç ┘à╪┤╪º┘ê╪▒┘ç ╪¡╪╢┘ê╪▒█î ┘ê ╪¬╪│╪¬ ┘╛┘ê╪│╪¬ ╪¿╪▒╪º█î ╪┤┘à╪º ╪¬┘å╪╕█î┘à ╪«┘ê╪º┘ç╪» ╪┤╪».
++              </div>
++            </div>
++
++            <div class="glass-card faq-item">
++              <button class="faq-header">
++                <span>┘à╪º┘å╪»┌»╪º╪▒█î ╪¿╪º┘ä█î╪º┌ÿ ╪»╪º█î┘à┘å╪┤┘å╪º┘ä ┌å┘é╪»╪▒ ╪º╪│╪¬╪ƒ</span>
++                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <polyline points="6 9 12 15 18 9"></polyline>
++                </svg>
++              </button>
++              <div class="faq-content">
++                █î┌⌐█î ╪º╪▓ ╪¿╪▓╪▒┌»╪¬╪▒█î┘å ┘à╪▓╪º█î╪º█î ╪¿╪º┘ä█î╪º┌ÿ ╪»╪º█î┘à┘å╪┤┘å╪º┘ä╪î ╪╣╪»┘à ┘å█î╪º╪▓ ╪¿┘ç ╪▒█î╪┤┘çΓÇî┌»█î╪▒█î ┘à╪»╪º┘ê┘à ╪º╪│╪¬. ╪¿┘ç ╪»┘ä█î┘ä ╪▒╪┤╪» ╪╖╪¿█î╪╣█î ╪▒█î╪┤┘ç ╪¿╪»┘ê┘å ╪º█î╪¼╪º╪» ╪«╪╖ ╪º┘ü┘é█î╪î ╪▓█î╪¿╪º█î█î ╪ó┘å ╪¬╪º █╢ ╪º┘ä█î █╣ ┘à╪º┘ç ╪¡┘ü╪╕ ┘à█îΓÇî╪┤┘ê╪» ┘ê ╪¬┘å┘ç╪º ┘å█î╪º╪▓ ╪¿┘ç ╪▒┘å┌»╪│╪º┌ÿ ╪»┘ê╪▒┘çΓÇî╪º█î ╪»╪º╪▒╪».
++              </div>
++            </div>
++
++            <div class="glass-card faq-item">
++              <button class="faq-header">
++                <span>╪┤╪▒╪º█î╪╖ ┌⌐┘å╪│┘ä█î █î╪º ╪¬╪║█î█î╪▒ ╪▓┘à╪º┘å ┘å┘ê╪¿╪¬ ┌å┌»┘ê┘å┘ç ╪º╪│╪¬╪ƒ</span>
++                <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <polyline points="6 9 12 15 18 9"></polyline>
++                </svg>
++              </button>
++              <div class="faq-content">
++                ╪º┘à┌⌐╪º┘å ╪¬╪║█î█î╪▒ ╪▓┘à╪º┘å ┘å┘ê╪¿╪¬ ╪¬╪º █┤█╕ ╪│╪º╪╣╪¬ ┘é╪¿┘ä ╪º╪▓ ┘à┘ê╪╣╪» ┘à┘é╪▒╪▒ ╪¿╪»┘ê┘å ┘ç█î┌å ┘ç╪▓█î┘å┘çΓÇî╪º█î ╪º╪▓ ╪╖╪▒█î┘é ╪¬┘à╪º╪│ ╪¬┘ä┘ü┘å█î █î╪º ┘╛╪┤╪¬█î╪¿╪º┘å█î ┘ê╪º╪¬╪│ΓÇî╪º┘╛ ┘ê╪¼┘ê╪» ╪»╪º╪▒╪».
++              </div>
+             </div>
+           </div>
+         </div>
+-      </div>
+-    </section>
+-
+-    <!-- Final CTA -->
+-    <section class="final-cta" id="booking">
+-      <div class="cta-background">
+-        <img
+-          src="images/premium-cta-background.jpg"
+-          alt="┘╛╪│ΓÇî╪▓┘à█î┘å┘ç"
+-          class="bg-img"
+-        />
+-        <div class="overlay"></div>
+-      </div>
+-      <div class="container cta-container relative animate-on-scroll">
+-        <div class="cta-box glass-panel">
+-          <h2>╪¿╪▒╪º█î ╪¬╪║█î█î╪▒ ╪ó┘à╪º╪»┘çΓÇî╪º█î╪»╪ƒ</h2>
+-          <p>
+-            ╪¬╪«┘ü█î┘ü █▓█░ ╪»╪▒╪╡╪»█î ╪«┘ê╪» ╪▒╪º ╪º╪▓ ╪»╪│╪¬ ┘å╪»┘ç█î╪». ┘ç┘à█î┘å ╪º┘à╪▒┘ê╪▓ ┘å┘ê╪¿╪¬ ╪«┘ê╪» ╪▒╪º ┘é╪╖╪╣█î
+-            ┌⌐┘å█î╪».
+-          </p>
+-
+-          <div class="contact-options">
+-            <a href="#" class="btn btn-primary btn-large glow-effect w-full"
+-              >╪▒╪▓╪▒┘ê ╪ó┘å┘ä╪º█î┘å ┘å┘ê╪¿╪¬</a
+-            >
+-
+-            <div class="divider"><span>█î╪º</span></div>
+-
+-            <div class="social-contact">
+-              <a href="#" class="btn-social whatsapp">
+-                <svg
+-                  width="20"
+-                  height="20"
+-                  viewBox="0 0 24 24"
+-                  fill="currentColor"
+-                >
+-                  <path
+-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"
+-                  />
++      </section>
++
++      <!-- Final High-Converting Call-to-Action Section -->
++      <section class="final-cta-section" id="booking">
++        <div class="container">
++          <div class="cta-box reveal">
++            <h2>╪¿╪▒╪º█î █î┌⌐ ╪¬╪║█î█î╪▒ ╪º╪│╪¬╪½┘å╪º█î█î ╪ó┘à╪º╪»┘çΓÇî╪º█î╪»╪ƒ</h2>
++            <p>
++              ┘ç┘à█î┘å ╪º┘à╪▒┘ê╪▓ ┘å┘ê╪¿╪¬ ╪«┘ê╪» ╪▒╪º ╪½╪¿╪¬ ┌⌐┘å█î╪» █î╪º ╪º╪▓ ╪╖╪▒█î┘é ┘╛█î╪º┘à ┘à╪│╪¬┘é█î┘à ╪¿╪º ┌⌐╪º╪▒╪┤┘å╪º╪│╪º┘å ┘à╪º ╪»╪▒ ╪º╪▒╪¬╪¿╪º╪╖ ╪¿╪º╪┤█î╪».
++            </p>
++            <div class="cta-buttons">
++              <button class="btn btn-primary btn-large open-booking-modal">
++                ╪▒╪▓╪▒┘ê ╪ó┘å┘ä╪º█î┘å ┘å┘ê╪¿╪¬
++                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <path d="M19 12H5M12 19l-7-7 7-7"/>
+                 </svg>
+-                ┘╛█î╪º┘à ╪»╪▒ ┘ê╪º╪¬╪│ΓÇî╪º┘╛
+-              </a>
+-              <a href="#" class="btn-social instagram">
+-                <svg
+-                  width="20"
+-                  height="20"
+-                  viewBox="0 0 24 24"
+-                  fill="currentColor"
+-                >
+-                  <path
+-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+-                  />
++              </button>
++              <a href="https://wa.me/989123456789" target="_blank" rel="noopener" class="btn btn-secondary btn-large">
++                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
++                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                 </svg>
+-                ╪»╪º█î╪▒┌⌐╪¬ ╪º█î┘å╪│╪¬╪º┌»╪▒╪º┘à
++                ┘à╪┤╪º┘ê╪▒┘ç ┘à╪│╪¬┘é█î┘à ╪»╪▒ ┘ê╪º╪¬╪│ΓÇî╪º┘╛
+               </a>
+             </div>
+           </div>
+         </div>
+-      </div>
+-    </section>
++      </section>
++    </main>
+ 
+     <!-- Footer -->
+     <footer class="footer">
+       <div class="container">
+-        <div class="footer-content">
++        <div class="footer-grid">
+           <div class="footer-brand">
+-            <a href="#" class="logo">╪│╪º╪▒╪º ┘å╪¼┘ü█î<span>.</span></a>
+-            <p>╪«╪»┘à╪º╪¬ ╪▓█î╪¿╪º█î█î ┘ä┘ê┌⌐╪│ ╪╖╪▒╪º╪¡█î ╪┤╪»┘ç ╪¿╪▒╪º█î ╪¬┘ê╪º┘å┘à┘å╪»╪│╪º╪▓█î ┘ê ╪¬╪║█î█î╪▒ ╪┤┘à╪º.</p>
+-            <div class="footer-socials">
+-              <a href="#" aria-label="Instagram"
+-                ><svg
+-                  width="24"
+-                  height="24"
+-                  viewBox="0 0 24 24"
+-                  fill="currentColor"
+-                >
+-                  <path
+-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+-                  /></svg
+-              ></a>
+-              <a href="#" aria-label="WhatsApp"
+-                ><svg
+-                  width="24"
+-                  height="24"
+-                  viewBox="0 0 24 24"
+-                  fill="currentColor"
+-                >
+-                  <path
+-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"
+-                  /></svg
+-              ></a>
++            <a href="#home" class="logo">
++              <img src="images/logo.jpg" alt="╪│╪º┘ä┘å ╪▓█î╪¿╪º█î█î ╪│█î┘à╪º ╪¿┘ä - ╪│╪º╪▒╪º ┘å╪¼┘ü█î" class="logo-img" />
++              <span class="logo-text">╪│█î┘à╪º ╪¿┘ä</span>
++            </a>
++            <p>
++              ╪º╪▒╪º╪ª┘çΓÇî╪»┘ç┘å╪»┘ç ╪«╪»┘à╪º╪¬ ┘ä┘ê┌⌐╪│ ╪▓█î╪¿╪º█î█î╪î ╪¿╪º┘ä█î╪º┌ÿ ╪º╪«╪¬╪╡╪º╪╡█î╪î ╪º╪¡█î╪º█î ┘à┘ê ┘ê ┘à█î┌⌐╪º┘╛ ╪¬╪«╪╡╪╡█î ╪╣╪▒┘ê╪│ ╪»╪▒ ┘ü╪╢╪º█î█î ╪ó╪▒╪º┘à╪┤ΓÇî╪¿╪«╪┤.
++            </p>
++            <div class="social-links">
++              <a href="#" class="social-link" aria-label="╪º█î┘å╪│╪¬╪º┌»╪▒╪º┘à">
++                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
++                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
++                </svg>
++              </a>
++              <a href="#" class="social-link" aria-label="┘ê╪º╪¬╪│ΓÇî╪º┘╛">
++                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
++                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
++                </svg>
++              </a>
+             </div>
+           </div>
+-          <div class="footer-links">
++
++          <div class="footer-column">
+             <h4>╪»╪│╪¬╪▒╪│█î ╪│╪▒█î╪╣</h4>
+-            <ul>
+-              <li><a href="#services">╪«╪»┘à╪º╪¬ ┘à╪º</a></li>
++            <ul class="footer-links">
++              <li><a href="#services">╪«╪»┘à╪º╪¬ ╪¬╪«╪╡╪╡█î</a></li>
++              <li><a href="#transformation">┘é╪¿┘ä ┘ê ╪¿╪╣╪»</a></li>
+               <li><a href="#portfolio">┘å┘à┘ê┘å┘ç ┌⌐╪º╪▒┘ç╪º</a></li>
+-              <li><a href="#salon">┘à╪¡█î╪╖ ╪│╪º┘ä┘å</a></li>
+-              <li><a href="#quiz-section">┘à╪┤╪º┘ê╪▒┘ç ╪º╪«╪¬╪╡╪º╪╡█î</a></li>
++              <li><a href="#quiz-section">╪¬╪│╪¬ ┘ç┘ê╪┤┘à┘å╪» ╪▓█î╪¿╪º█î█î</a></li>
++              <li><a href="#faq">╪│┘ê╪º┘ä╪º╪¬ ┘à╪¬╪»╪º┘ê┘ä</a></li>
+             </ul>
+           </div>
+-          <div class="footer-contact">
++
++          <div class="footer-column">
++            <h4>╪│╪º╪╣╪º╪¬ ┌⌐╪º╪▒█î</h4>
++            <ul class="footer-links">
++              <li>╪┤┘å╪¿┘ç ╪¬╪º ┌å┘ç╪º╪▒╪┤┘å╪¿┘ç: █▒█░:█░█░ ╪¬╪º █▒█╣:█░█░</li>
++              <li>┘╛┘å╪¼ΓÇî╪┤┘å╪¿┘ç: █▒█░:█░█░ ╪¬╪º █▒█╖:█░█░</li>
++              <li>╪¼┘à╪╣┘ç ┘ê ╪¬╪╣╪╖█î┘ä╪º╪¬: ╪¿╪º ┘ç┘à╪º┘ç┘å┌»█î ╪▒╪▓╪▒┘ê</li>
++            </ul>
++          </div>
++
++          <div class="footer-column">
+             <h4>╪º╪▒╪¬╪¿╪º╪╖ ╪¿╪º ┘à╪º</h4>
+-            <p>╪¬┘ç╪▒╪º┘å╪î ┘å█î╪º┘ê╪▒╪º┘å╪î ╪«█î╪º╪¿╪º┘å ┘ä┘ê┌⌐╪│╪î ┘╛┘ä╪º┌⌐ █▒█▓█│</p>
+-            <p>╪º█î┘à█î┘ä: hello@saranajafi.com</p>
+-            <p>╪¬┘ä┘ü┘å: █░█▓█▒-█▒█▓█│█┤█╡█╢█╖█╕</p>
++            <ul class="footer-contact">
++              <li>
++                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
++                  <circle cx="12" cy="10" r="3"></circle>
++                </svg>
++                ╪¬┘ç╪▒╪º┘å╪î ┘å█î╪º┘ê╪▒╪º┘å╪î ╪«█î╪º╪¿╪º┘å ┘à┌ÿ╪»┘ç╪î ┘╛┘ä╪º┌⌐ █▒█▓
++              </li>
++              <li>
++                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
++                </svg>
++                █░█▓█▒-█▓█▓█░█░█│█│█┤█┤
++              </li>
++            </ul>
+           </div>
+         </div>
++
+         <div class="footer-bottom">
+           <p>&copy; █▓█░█▓█╢ ╪│╪º┘ä┘å ╪▓█î╪¿╪º█î█î ╪│╪º╪▒╪º ┘å╪¼┘ü█î. ╪¬┘à╪º┘à█î ╪¡┘é┘ê┘é ┘à╪¡┘ü┘ê╪╕ ╪º╪│╪¬.</p>
++          <p>╪╖╪▒╪º╪¡█î ╪┤╪»┘ç ╪¿╪º ╪º╪│╪¬╪º┘å╪»╪º╪▒╪» ╪¼┘ç╪º┘å█î UI/UX</p>
+         </div>
+       </div>
+     </footer>
+ 
+-    <!-- Custom JS -->
++    <!-- Interactive Booking Modal Dialog -->
++    <div class="modal-backdrop" id="booking-modal">
++      <div class="modal-box">
++        <button class="modal-close" id="modal-close" aria-label="╪¿╪│╪¬┘å ┘ü╪▒┘à">
++          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++            <line x1="18" y1="6" x2="6" y2="18"></line>
++            <line x1="6" y1="6" x2="18" y2="18"></line>
++          </svg>
++        </button>
++        <div class="modal-header">
++          <h3>╪▒╪▓╪▒┘ê ┘å┘ê╪¿╪¬ ┘à╪┤╪º┘ê╪▒┘ç ┘ê ╪«╪»┘à╪º╪¬</h3>
++          <p>┘ü╪▒┘à ╪▓█î╪▒ ╪▒╪º ╪¬┌⌐┘à█î┘ä ┌⌐┘å█î╪» ╪¬╪º ┌⌐╪º╪▒╪┤┘å╪º╪│╪º┘å ┘à╪º ╪╕╪▒┘ü █▓ ╪│╪º╪╣╪¬ ┌⌐╪º╪▒█î ╪¿╪º ╪┤┘à╪º ╪¬┘à╪º╪│ ╪¿┌»█î╪▒┘å╪».</p>
++        </div>
++        <form id="modal-booking-form" class="lead-form-grid">
++          <div class="form-group">
++            <label for="modal-name">┘å╪º┘à ┌⌐╪º┘à┘ä</label>
++            <input type="text" id="modal-name" class="form-input" required placeholder="┘å╪º┘à ┘ê ┘å╪º┘à ╪«╪º┘å┘ê╪º╪»┌»█î" />
++          </div>
++          <div class="form-group">
++            <label for="modal-phone">╪┤┘à╪º╪▒┘ç ┘ç┘à╪▒╪º┘ç</label>
++            <input type="tel" id="modal-phone" class="form-input" required placeholder="█░█╣█▒█▓█│█┤█╡█╢█╖█╕█╣" dir="ltr" style="text-align: right;" />
++          </div>
++          <div class="form-group">
++            <label for="modal-service">╪«╪»┘à╪º╪¬ ┘à┘ê╪▒╪» ┘å╪╕╪▒</label>
++            <select id="modal-service" class="form-input" required style="background: var(--bg-surface-elevated);">
++              <option value="╪¿╪º┘ä█î╪º┌ÿ ┘ê ╪▒┘å┌» ┘à┘ê">╪¿╪º┘ä█î╪º┌ÿ ┘ê ╪▒┘å┌» ┘à┘ê█î ╪¬╪«╪╡╪╡█î</option>
++              <option value="┘à█î┌⌐╪º┘╛ ╪╣╪▒┘ê╪│">┘à█î┌⌐╪º┘╛ ╪╣╪▒┘ê╪│ / ┘à╪¼╪º┘ä╪│</option>
++              <option value="╪º╪¡█î╪º ┘ê ╪¿┘ê╪¬╪º┌⌐╪│ ┘à┘ê">╪¿┘ê╪¬╪º┌⌐╪│ ┘ê ╪º╪¡█î╪º█î ┘à┘ê</option>
++              <option value="┌⌐┘ê┘╛ ┘ê ╪º╪│╪¬╪º█î┘ä">┌⌐┘ê┘╛ ┘ê ╪º╪│╪¬╪º█î┘ä█î┘å┌»</option>
++            </select>
++          </div>
++          <button type="submit" class="btn btn-primary btn-large w-full" style="margin-top: 1rem;">
++            ╪½╪¿╪¬ ┘å┘ç╪º█î█î ╪»╪▒╪«┘ê╪º╪│╪¬ ╪▒╪▓╪▒┘ê
++          </button>
++        </form>
++      </div>
++    </div>
++
++    <!-- Notification Toast Container -->
++    <div class="toast-notification" id="toast-notification">
++      <div class="toast-icon">
++        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
++          <polyline points="22 4 12 14.01 9 11.01"></polyline>
++        </svg>
++      </div>
++      <div id="toast-message">╪»╪▒╪«┘ê╪º╪│╪¬ ╪┤┘à╪º ╪¿╪º ┘à┘ê┘ü┘é█î╪¬ ╪½╪¿╪¬ ╪┤╪».</div>
++    </div>
++
++    <!-- Back-to-Top Button -->
++    <button class="back-to-top" id="back-to-top" aria-label="╪¿╪º╪▓┌»╪┤╪¬ ╪¿┘ç ╪¿╪º┘ä╪º█î ╪╡┘ü╪¡┘ç">
++      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
++        <line x1="12" y1="19" x2="12" y2="5"></line>
++        <polyline points="5 12 12 5 19 12"></polyline>
++      </svg>
++    </button>
++
++    <!-- Custom Scripts -->
+     <script src="js/script.js"></script>
+   </body>
+ </html>

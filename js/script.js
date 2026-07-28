@@ -1,194 +1,461 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // ==========================================
-    // Navbar Scroll Effect & Mobile Menu
-    // ==========================================
-    const navbar = document.getElementById('navbar');
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    const navActions = document.querySelector('.nav-actions');
+document.addEventListener("DOMContentLoaded", () => {
+  // ==========================================================================
+  // 1. Navigation Scroll Effect, Active Link Scrollspy & Mobile Drawer Controller
+  // ==========================================================================
+  const navbar = document.getElementById("navbar");
+  const mobileToggle = document.getElementById("mobile-toggle");
+  const mobileDrawer = document.getElementById("mobile-drawer");
+  const mobileClose = document.getElementById("mobile-close");
+  const mobileOverlay = document.getElementById("mobile-overlay");
+  const mobileLinks = document.querySelectorAll(
+    ".mobile-link, .mobile-nav-links a",
+  );
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const backToTopBtn = document.getElementById("back-to-top");
+  const sections = document.querySelectorAll("section[id]");
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+  // Drawer Controls
+  const openDrawer = () => {
+    mobileDrawer?.classList.add("active");
+    mobileOverlay?.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeDrawer = () => {
+    mobileDrawer?.classList.remove("active");
+    mobileOverlay?.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+  if (mobileToggle) mobileToggle.addEventListener("click", openDrawer);
+  if (mobileClose) mobileClose.addEventListener("click", closeDrawer);
+  if (mobileOverlay) mobileOverlay.addEventListener("click", closeDrawer);
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", closeDrawer);
+  });
+
+  // Scrollspy for active navigation links
+  const updateActiveNav = () => {
+    let currentSectionId = "home";
+    const scrollPosition = window.scrollY + 160;
+
+    sections.forEach((section) => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        currentSectionId = section.getAttribute("id");
+      }
     });
 
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            navActions.classList.toggle('active');
-        });
+    if (window.scrollY < 100) {
+      currentSectionId = "home";
     }
 
-    // ==========================================
-    // Quiz State Machine Logic
-    // ==========================================
-    const quizSteps = document.querySelectorAll('.quiz-step');
-    const nextBtns = document.querySelectorAll('.next-btn');
-    const prevBtns = document.querySelectorAll('.prev-btn');
-    const progressBar = document.getElementById('quiz-progress');
-    
-    let currentStep = 0;
-    const totalSteps = quizSteps.length;
-    
-    // Function to update step visibility and progress
-    const updateQuizState = () => {
-        quizSteps.forEach((step, index) => {
-            if (index === currentStep) {
-                step.classList.add('active');
-            } else {
-                step.classList.remove('active');
-            }
-        });
-        
-        // Calculate progress (excluding the lead form step which is the last one)
-        // If 4 steps (3 questions + 1 lead form)
-        const progressPercentage = ((currentStep + 1) / totalSteps) * 100;
-        if (progressBar) {
-            progressBar.style.width = `${progressPercentage}%`;
-        }
-    };
-
-    // Enable Next buttons only when an option is selected
-    quizSteps.forEach((step, index) => {
-        const radios = step.querySelectorAll('input[type="radio"]');
-        const nextBtn = step.querySelector('.next-btn');
-        
-        if (radios.length > 0 && nextBtn) {
-            radios.forEach(radio => {
-                radio.addEventListener('change', () => {
-                    nextBtn.removeAttribute('disabled');
-                });
-            });
-        }
+    const allNavItems = document.querySelectorAll(
+      ".nav-links a, .mobile-nav-links a",
+    );
+    allNavItems.forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href === `#${currentSectionId}`) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
     });
+  };
 
-    // Next Button Listeners
-    nextBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            if (currentStep < totalSteps - 1) {
-                currentStep++;
-                updateQuizState();
-            }
-        });
-    });
-
-    // Previous Button Listeners
-    prevBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            if (currentStep > 0) {
-                currentStep--;
-                updateQuizState();
-            }
-        });
-    });
-
-    // Initialize first step
-    updateQuizState();
-
-
-    // ==========================================
-    // Lead Form Submission & Results Display
-    // ==========================================
-    const leadForm = document.getElementById('lead-form');
-    const quizSection = document.getElementById('quiz-section');
-    const resultsSection = document.getElementById('results-section');
-    const userNameDisplay = document.getElementById('user-name-display');
-
-    if (leadForm) {
-        leadForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get user's first name
-            const firstName = document.getElementById('first-name').value;
-            if (firstName && userNameDisplay) {
-                userNameDisplay.textContent = firstName;
-            }
-            
-            // Hide Quiz Section and Show Results Section
-            quizSection.style.display = 'none';
-            resultsSection.classList.remove('hidden');
-            
-            // Scroll to results smoothly
-            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            
-            // Start the countdown timer
-            startCountdown();
-        });
-    }
-
-    // ==========================================
-    // Countdown Timer (48 Hours)
-    // ==========================================
-    const startCountdown = () => {
-        // Set time for 48 hours from now
-        const now = new Date().getTime();
-        const countDownDate = now + (48 * 60 * 60 * 1000);
-
-        const timerInterval = setInterval(() => {
-            const currentTime = new Date().getTime();
-            const distance = countDownDate - currentTime;
-
-            // Time calculations
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24 * 3)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Output the result
-            const hoursEl = document.getElementById("hours");
-            const minsEl = document.getElementById("minutes");
-            const secsEl = document.getElementById("seconds");
-
-            if(hoursEl && minsEl && secsEl) {
-                hoursEl.textContent = hours < 10 ? '0' + hours : hours;
-                minsEl.textContent = minutes < 10 ? '0' + minutes : minutes;
-                secsEl.textContent = seconds < 10 ? '0' + seconds : seconds;
-            }
-
-            // If the count down is over, clear interval
-            if (distance < 0) {
-                clearInterval(timerInterval);
-                if(hoursEl && minsEl && secsEl) {
-                    hoursEl.textContent = "00";
-                    minsEl.textContent = "00";
-                    secsEl.textContent = "00";
-                }
-            }
-        }, 1000);
-    };
-
-    // ==========================================
-    // Scroll Animations (Intersection Observer)
-    // ==========================================
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    
-    if ('IntersectionObserver' in window) {
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
-        
-        const scrollObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Only animate once
-                }
-            });
-        }, observerOptions);
-        
-        animatedElements.forEach(el => {
-            scrollObserver.observe(el);
-        });
+  // Scroll Header & Back-to-Top Effect
+  const handleScroll = () => {
+    if (window.scrollY > 40) {
+      navbar?.classList.add("scrolled");
     } else {
-        // Fallback for older browsers
-        animatedElements.forEach(el => {
-            el.classList.add('visible');
-        });
+      navbar?.classList.remove("scrolled");
     }
 
+    if (window.scrollY > 400) {
+      backToTopBtn?.classList.add("visible");
+    } else {
+      backToTopBtn?.classList.remove("visible");
+    }
+
+    updateActiveNav();
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+
+  // Back to top click
+  backToTopBtn?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // ==========================================================================
+  // 2. Interactive Before / After Comparison Slider
+  // ==========================================================================
+  const baSlider = document.getElementById("ba-slider");
+  const baAfterLayer = document.getElementById("ba-after-layer");
+  const baHandle = document.getElementById("ba-handle");
+
+  if (baSlider && baAfterLayer && baHandle) {
+    let isDragging = false;
+
+    const updateSliderPosition = (clientX) => {
+      const rect = baSlider.getBoundingClientRect();
+      let x = clientX - rect.left;
+
+      // Boundary constraints
+      if (x < 0) x = 0;
+      if (x > rect.width) x = rect.width;
+
+      const percentage = (x / rect.width) * 100;
+
+      // Undistorted Clip Path clipping
+      baAfterLayer.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+      baHandle.style.left = `${percentage}%`;
+    };
+
+    const startDragging = (e) => {
+      isDragging = true;
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      updateSliderPosition(clientX);
+    };
+
+    const stopDragging = () => {
+      isDragging = false;
+    };
+
+    const onMove = (e) => {
+      if (!isDragging) return;
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      updateSliderPosition(clientX);
+    };
+
+    baSlider.addEventListener("mousedown", startDragging);
+    baSlider.addEventListener("touchstart", startDragging, { passive: true });
+
+    window.addEventListener("mouseup", stopDragging);
+    window.addEventListener("touchend", stopDragging);
+
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("touchmove", onMove, { passive: true });
+  }
+
+  // ==========================================================================
+  // 3. Animated Number Counters
+  // ==========================================================================
+  const statNumbers = document.querySelectorAll(".stat-number");
+  let hasAnimatedStats = false;
+
+  const animateCounters = () => {
+    if (hasAnimatedStats) return;
+    hasAnimatedStats = true;
+
+    statNumbers.forEach((stat) => {
+      const target = parseInt(stat.getAttribute("data-target"), 10);
+      if (isNaN(target)) return;
+
+      let current = 0;
+      const duration = 2000;
+      const increment = target / (duration / 16);
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+
+        if (target === 5000) {
+          stat.textContent = `+${Math.floor(current).toLocaleString("fa-IR")}`;
+        } else if (target === 99) {
+          stat.textContent = `${Math.floor(current).toLocaleString("fa-IR")}٪`;
+        } else {
+          stat.textContent = `+${Math.floor(current).toLocaleString("fa-IR")}`;
+        }
+      }, 16);
+    });
+  };
+
+  // Observer for Hero Stats
+  const statsContainer = document.querySelector(".hero-stats");
+  if (statsContainer && "IntersectionObserver" in window) {
+    const statsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    statsObserver.observe(statsContainer);
+  } else {
+    animateCounters();
+  }
+
+  // ==========================================================================
+  // 4. Diagnostic Quiz State Machine & Lead Form
+  // ==========================================================================
+  const quizSteps = document.querySelectorAll(".quiz-step");
+  const quizProgressBar = document.getElementById("quiz-progress-bar");
+  const quizStepText = document.getElementById("quiz-step-text");
+  const quizPercentText = document.getElementById("quiz-percent-text");
+  const quizLeadForm = document.getElementById("quiz-lead-form");
+  const resultsSection = document.getElementById("results-section");
+  const quizSection = document.getElementById("quiz-section");
+  const userNameDisplay = document.getElementById("user-name-display");
+
+  let currentQuizStep = 0;
+  const totalQuizSteps = 4; // 3 questions + 1 lead form
+
+  const updateQuizUI = () => {
+    quizSteps.forEach((step, index) => {
+      if (index === currentQuizStep) {
+        step.classList.add("active");
+      } else {
+        step.classList.remove("active");
+      }
+    });
+
+    const progressPercent = Math.round(
+      ((currentQuizStep + 1) / totalQuizSteps) * 100,
+    );
+    if (quizProgressBar) quizProgressBar.style.width = `${progressPercent}%`;
+    if (quizPercentText)
+      quizPercentText.textContent = `${progressPercent.toLocaleString("fa-IR")}٪ کامل شده`;
+
+    if (currentQuizStep < 3) {
+      if (quizStepText)
+        quizStepText.textContent = `مرحله ${(currentQuizStep + 1).toLocaleString("fa-IR")} از ۳`;
+    } else {
+      if (quizStepText) quizStepText.textContent = `مرحله نهایی`;
+    }
+  };
+
+  // Enable next button when option chosen
+  quizSteps.forEach((step) => {
+    const radioInputs = step.querySelectorAll('input[type="radio"]');
+    const nextBtn = step.querySelector(".quiz-next-btn");
+
+    if (radioInputs.length > 0 && nextBtn) {
+      radioInputs.forEach((input) => {
+        input.addEventListener("change", () => {
+          nextBtn.removeAttribute("disabled");
+        });
+      });
+
+      nextBtn.addEventListener("click", () => {
+        if (currentQuizStep < totalQuizSteps - 1) {
+          currentQuizStep++;
+          updateQuizUI();
+        }
+      });
+    }
+
+    const prevBtn = step.querySelector(".quiz-prev-btn");
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        if (currentQuizStep > 0) {
+          currentQuizStep--;
+          updateQuizUI();
+        }
+      });
+    }
+  });
+
+  // Quiz Lead Form Submit
+  if (quizLeadForm) {
+    quizLeadForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById("quiz-name").value;
+
+      if (userNameDisplay && nameInput) {
+        userNameDisplay.textContent = nameInput;
+      }
+
+      if (quizSection) quizSection.classList.add("hidden");
+      if (resultsSection) {
+        resultsSection.classList.remove("hidden");
+        resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      startCountdownTimer();
+      showToast("تحلیل اختصاصی شما با موفقیت آماده شد!");
+    });
+  }
+
+  // ==========================================================================
+  // 5. 48-Hour Countdown Timer
+  // ==========================================================================
+  const startCountdownTimer = () => {
+    const countDownDate = new Date().getTime() + 48 * 60 * 60 * 1000;
+
+    const hoursEl = document.getElementById("hours");
+    const minsEl = document.getElementById("minutes");
+    const secsEl = document.getElementById("seconds");
+
+    const timerInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      if (distance < 0) {
+        clearInterval(timerInterval);
+        if (hoursEl) hoursEl.textContent = "00";
+        if (minsEl) minsEl.textContent = "00";
+        if (secsEl) secsEl.textContent = "00";
+        return;
+      }
+
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      if (hoursEl) hoursEl.textContent = hours < 10 ? "0" + hours : hours;
+      if (minsEl) minsEl.textContent = minutes < 10 ? "0" + minutes : minutes;
+      if (secsEl) secsEl.textContent = seconds < 10 ? "0" + seconds : seconds;
+    }, 1000);
+  };
+
+  // ==========================================================================
+  // 6. Portfolio Category Filter
+  // ==========================================================================
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const galleryCards = document.querySelectorAll(".gallery-card");
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filterValue = btn.getAttribute("data-filter");
+
+      galleryCards.forEach((card) => {
+        const category = card.getAttribute("data-category");
+        if (filterValue === "all" || category === filterValue) {
+          card.style.display = "block";
+          card.style.opacity = "1";
+        } else {
+          card.style.display = "none";
+          card.style.opacity = "0";
+        }
+      });
+    });
+  });
+
+  // ==========================================================================
+  // 7. FAQ Accordion Toggle
+  // ==========================================================================
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const header = item.querySelector(".faq-header");
+    if (header) {
+      header.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        // Close other items
+        faqItems.forEach((other) => other.classList.remove("active"));
+
+        // Toggle current
+        if (!isActive) {
+          item.classList.add("active");
+        }
+      });
+    }
+  });
+
+  // ==========================================================================
+  // 8. Booking Modal Dialog Controller
+  // ==========================================================================
+  const bookingModal = document.getElementById("booking-modal");
+  const openModalBtns = document.querySelectorAll(".open-booking-modal");
+  const closeModalBtn = document.getElementById("modal-close");
+  const modalBookingForm = document.getElementById("modal-booking-form");
+  const modalServiceSelect = document.getElementById("modal-service");
+
+  openModalBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const requestedService = btn.getAttribute("data-service");
+      if (requestedService && modalServiceSelect) {
+        modalServiceSelect.value = requestedService;
+      }
+      if (bookingModal) {
+        bookingModal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    });
+  });
+
+  const closeModal = () => {
+    if (bookingModal) {
+      bookingModal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  };
+
+  closeModalBtn?.addEventListener("click", closeModal);
+  bookingModal?.addEventListener("click", (e) => {
+    if (e.target === bookingModal) {
+      closeModal();
+    }
+  });
+
+  if (modalBookingForm) {
+    modalBookingForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      closeModal();
+      showToast("نوبت شما با موفقیت رزرو شد. به زودی با شما تماس می‌گیریم.");
+      modalBookingForm.reset();
+    });
+  }
+
+  // ==========================================================================
+  // 9. Toast Notification System
+  // ==========================================================================
+  const toast = document.getElementById("toast-notification");
+  const toastMessage = document.getElementById("toast-message");
+  let toastTimeout;
+
+  const showToast = (message) => {
+    if (!toast || !toastMessage) return;
+    toastMessage.textContent = message;
+    toast.classList.add("active");
+
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove("active");
+    }, 4000);
+  };
+
+  // ==========================================================================
+  // 10. Scroll Reveal Animations (Intersection Observer)
+  // ==========================================================================
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px",
+      },
+    );
+
+    revealElements.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealElements.forEach((el) => el.classList.add("visible"));
+  }
 });
