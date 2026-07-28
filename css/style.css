@@ -2306,4 +2306,52 @@ section {
     gap: 1rem;
     text-align: center;
   }
+
+  /* Navbar Mobile Overrides */
+  .nav-container {
+    height: 70px !important;
+  }
+  .navbar.scrolled .nav-container {
+    height: 60px !important;
+  }
+  .logo-img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .logo {
+    font-size: 1.2rem !important;
+  }
+
+  /* Hero Section Mobile Overrides */
+  .hero {
+    min-height: auto;
+    padding-top: 130px;
+    padding-bottom: 3rem;
+  }
+
+  .hero-visual,
+  .hero-stats {
+    display: none !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 7vw, 2.2rem) !important;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    font-size: 0.95rem !important;
+    padding: 0.9rem 1.5rem !important;
+  }
 }
