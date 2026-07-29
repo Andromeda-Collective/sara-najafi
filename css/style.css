@@ -3074,6 +3074,7 @@ section {
 .price-comparison {
   display: flex;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1rem;
 }
@@ -3272,5 +3273,17 @@ section {
   }
   .course-teaser-card {
     padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-number {
+    font-size: 2rem;
+  }
+  .old-price {
+    font-size: 1.1rem;
+  }
+  .price-comparison {
+    gap: 0.5rem;
   }
 }
