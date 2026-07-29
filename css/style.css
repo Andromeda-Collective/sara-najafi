@@ -2435,6 +2435,32 @@ section {
     padding: 2rem 1.5rem;
   }
 
+  /* Offer Banner & Timer Overrides */
+  .offer-banner {
+    padding: 2rem 1.25rem;
+  }
+  
+  .timer-box {
+    padding: 1.5rem 1rem;
+  }
+  
+  .countdown-digits {
+    gap: 0.6rem;
+  }
+  
+  .digit-val {
+    font-size: 1.8rem;
+  }
+  
+  .digit-sep {
+    font-size: 1.4rem;
+    margin-top: -10px;
+  }
+  
+  .digit-label {
+    font-size: 0.7rem;
+  }
+
   .footer-bottom {
     flex-direction: column;
     gap: 1rem;
