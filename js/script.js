@@ -93,53 +93,56 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================================================
   // 2. Interactive Before / After Comparison Slider
   // ==========================================================================
-  const baSlider = document.getElementById("ba-slider");
-  const baAfterLayer = document.getElementById("ba-after-layer");
-  const baHandle = document.getElementById("ba-handle");
+  const baSliders = document.querySelectorAll(".ba-slider");
 
-  if (baSlider && baAfterLayer && baHandle) {
-    let isDragging = false;
+  baSliders.forEach((slider) => {
+    const afterLayer = slider.querySelector(".ba-after");
+    const handle = slider.querySelector(".ba-handle");
 
-    const updateSliderPosition = (clientX) => {
-      const rect = baSlider.getBoundingClientRect();
-      let x = clientX - rect.left;
+    if (afterLayer && handle) {
+      let isDragging = false;
 
-      // Boundary constraints
-      if (x < 0) x = 0;
-      if (x > rect.width) x = rect.width;
+      const updateSliderPosition = (clientX) => {
+        const rect = slider.getBoundingClientRect();
+        let x = clientX - rect.left;
 
-      const percentage = (x / rect.width) * 100;
+        // Boundary constraints
+        if (x < 0) x = 0;
+        if (x > rect.width) x = rect.width;
 
-      // Undistorted Clip Path clipping
-      baAfterLayer.style.clipPath = `inset(0 0 0 ${percentage}%)`;
-      baHandle.style.left = `${percentage}%`;
-    };
+        const percentage = (x / rect.width) * 100;
 
-    const startDragging = (e) => {
-      isDragging = true;
-      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-      updateSliderPosition(clientX);
-    };
+        // Undistorted Clip Path clipping
+        afterLayer.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+        handle.style.left = `${percentage}%`;
+      };
 
-    const stopDragging = () => {
-      isDragging = false;
-    };
+      const startDragging = (e) => {
+        isDragging = true;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        updateSliderPosition(clientX);
+      };
 
-    const onMove = (e) => {
-      if (!isDragging) return;
-      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-      updateSliderPosition(clientX);
-    };
+      const stopDragging = () => {
+        isDragging = false;
+      };
 
-    baSlider.addEventListener("mousedown", startDragging);
-    baSlider.addEventListener("touchstart", startDragging, { passive: true });
+      const onMove = (e) => {
+        if (!isDragging) return;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        updateSliderPosition(clientX);
+      };
 
-    window.addEventListener("mouseup", stopDragging);
-    window.addEventListener("touchend", stopDragging);
+      slider.addEventListener("mousedown", startDragging);
+      slider.addEventListener("touchstart", startDragging, { passive: true });
 
-    window.addEventListener("mousemove", onMove);
-    window.addEventListener("touchmove", onMove, { passive: true });
-  }
+      window.addEventListener("mouseup", stopDragging);
+      window.addEventListener("touchend", stopDragging);
+
+      window.addEventListener("mousemove", onMove);
+      window.addEventListener("touchmove", onMove, { passive: true });
+    }
+  });
 
   // ==========================================================================
   // 3. Animated Number Counters
