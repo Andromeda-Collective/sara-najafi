@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const progressPercent = Math.round(
-      ((currentQuizStep + 1) / totalQuizSteps) * 100,
+      (currentQuizStep / (totalQuizSteps - 1)) * 100,
     );
     if (quizProgressBar) quizProgressBar.style.width = `${progressPercent}%`;
     if (quizPercentText)

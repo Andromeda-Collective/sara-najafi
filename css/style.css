@@ -2287,6 +2287,10 @@ section {
     height: 380px;
   }
 
+  .quiz-main {
+    padding: 2rem 1.25rem;
+  }
+
 
   .cta-box {
     padding: 3rem 1.5rem;
