@@ -456,4 +456,136 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     revealElements.forEach((el) => el.classList.add("visible"));
   }
+
+  // ==========================================================================
+  // 11. Hero Section 3-Image Luxury Slider Controller
+  // ==========================================================================
+  const heroSlider = document.getElementById("hero-slider");
+  if (heroSlider) {
+    const slides = heroSlider.querySelectorAll(".hero-slide");
+    const dots = heroSlider.querySelectorAll(".slider-dot");
+    const prevBtn = document.getElementById("hero-slider-prev");
+    const nextBtn = document.getElementById("hero-slider-next");
+
+    let currentSlide = 0;
+    let slideInterval = null;
+    const autoPlayDelay = 4500;
+
+    const goToSlide = (index) => {
+      if (index < 0) {
+        currentSlide = slides.length - 1;
+      } else if (index >= slides.length) {
+        currentSlide = 0;
+      } else {
+        currentSlide = index;
+      }
+
+      slides.forEach((slide, idx) => {
+        if (idx === currentSlide) {
+          slide.classList.add("active");
+        } else {
+          slide.classList.remove("active");
+        }
+      });
+
+      dots.forEach((dot, idx) => {
+        if (idx === currentSlide) {
+          dot.classList.add("active");
+        } else {
+          dot.classList.remove("active");
+        }
+      });
+    };
+
+    const nextSlide = () => goToSlide(currentSlide + 1);
+    const prevSlide = () => goToSlide(currentSlide - 1);
+
+    const startAutoPlay = () => {
+      stopAutoPlay();
+      slideInterval = setInterval(nextSlide, autoPlayDelay);
+    };
+
+    const stopAutoPlay = () => {
+      if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null;
+      }
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        prevSlide();
+        startAutoPlay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        nextSlide();
+        startAutoPlay();
+      });
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const index = parseInt(dot.getAttribute("data-index"), 10);
+        if (!isNaN(index)) {
+          goToSlide(index);
+          startAutoPlay();
+        }
+      });
+    });
+
+    // Mobile touch swipe gesture
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    heroSlider.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoPlay();
+      },
+      { passive: true }
+    );
+
+    heroSlider.addEventListener(
+      "touchend",
+      (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const swipeDistance = touchEndX - touchStartX;
+        if (swipeDistance > 40) {
+          prevSlide();
+        } else if (swipeDistance < -40) {
+          nextSlide();
+        }
+        startAutoPlay();
+      },
+      { passive: true }
+    );
+
+    // Pause auto-play on mouse hover
+    heroSlider.addEventListener("mouseenter", stopAutoPlay);
+    heroSlider.addEventListener("mouseleave", startAutoPlay);
+
+    // Keyboard navigation when hero section is in view
+    document.addEventListener("keydown", (e) => {
+      const heroSection = document.getElementById("home");
+      if (!heroSection) return;
+      const rect = heroSection.getBoundingClientRect();
+      const isHeroVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      if (!isHeroVisible) return;
+
+      if (e.key === "ArrowLeft") {
+        nextSlide();
+        startAutoPlay();
+      } else if (e.key === "ArrowRight") {
+        prevSlide();
+        startAutoPlay();
+      }
+    });
+
+    goToSlide(0);
+    startAutoPlay();
+  }
 });
