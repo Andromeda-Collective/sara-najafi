@@ -166,9 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
           clearInterval(timer);
         }
 
-        if (target === 5000) {
-          stat.textContent = `+${Math.floor(current).toLocaleString("fa-IR")}`;
-        } else if (target === 99) {
+        if (target === 99) {
           stat.textContent = `${Math.floor(current).toLocaleString("fa-IR")}٪`;
         } else {
           stat.textContent = `+${Math.floor(current).toLocaleString("fa-IR")}`;

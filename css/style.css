@@ -874,26 +874,6 @@ section {
   box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
 }
 
-.ba-label {
-  position: absolute;
-  top: 20px;
-  padding: 0.4rem 1rem;
-  background: rgba(10, 11, 14, 0.75);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--clr-text-primary);
-  z-index: 5;
-}
-
-.ba-label-before {
-  right: 20px;
-}
-.ba-label-after {
-  left: 20px;
-}
 
 /* ==========================================================================
    Problem / Agitation Section
@@ -2277,6 +2257,20 @@ section {
 }
 
 @media (max-width: 768px) {
+  /* General Typography Mobile Overrides */
+  .section-title {
+    font-size: clamp(1.6rem, 6vw, 2rem) !important;
+  }
+  .section-subtitle {
+    font-size: 0.9rem !important;
+  }
+  h3 {
+    font-size: 1.15rem !important;
+  }
+  p {
+    font-size: 0.95rem !important;
+  }
+
   .problems-grid,
   .services-grid,
   .results-grid,
@@ -2292,6 +2286,7 @@ section {
   .ba-slider {
     height: 380px;
   }
+
 
   .cta-box {
     padding: 3rem 1.5rem;
