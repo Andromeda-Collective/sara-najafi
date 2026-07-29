@@ -2508,3 +2508,711 @@ section {
     padding: 0.9rem 1.5rem !important;
   }
 }
+
+/* ==========================================================================
+   Marketing Funnel: Free 20-Minute Course & Golden Education Masterclass
+   ========================================================================== */
+
+/* Gold Tag & Accents */
+.gold-tag {
+  background: rgba(24, 42, 36, 0.08) !important;
+  border-color: var(--color-brand-pink) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #182A24 0%, #D4A373 50%, #182A24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- 1. Free Course Teaser Banner Section --- */
+.free-course-teaser {
+  padding: var(--space-xl) 0;
+  background: var(--color-bg-alt);
+  position: relative;
+}
+
+.course-teaser-card {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-brand-pink);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 3rem;
+  box-shadow: var(--shadow-lg), var(--glow-gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.course-teaser-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(242, 184, 186, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+.course-teaser-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.course-teaser-title {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 1.2rem 0;
+  color: var(--color-text-primary);
+}
+
+.course-teaser-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-body);
+  margin-bottom: 2rem;
+}
+
+.course-highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+.highlight-item svg {
+  color: var(--color-text-primary);
+  background: var(--color-brand-pink);
+  border-radius: 50%;
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+.course-teaser-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Video Card Thumbnail Preview */
+.course-video-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid var(--color-brand-taupe);
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4/3;
+  background: var(--color-text-primary);
+}
+
+.course-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+  filter: brightness(0.9);
+}
+
+.course-video-card:hover .course-thumb-img {
+  transform: scale(1.04);
+}
+
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(24, 42, 36, 0.35);
+  cursor: pointer;
+}
+
+.play-btn-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--color-brand-pink);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(242, 184, 186, 0.8);
+  transition: transform var(--transition-fast);
+  z-index: 2;
+  padding-left: 3px;
+}
+
+.video-play-overlay:hover .play-btn-circle {
+  transform: scale(1.15);
+  background: var(--color-brand-taupe);
+}
+
+.play-pulse {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(242, 184, 186, 0.4);
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.course-duration-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(24, 42, 36, 0.85);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid rgba(242, 184, 186, 0.3);
+}
+
+.course-enrollment-pill {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(10px);
+  color: var(--color-text-primary);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1px solid var(--color-brand-pink);
+  box-shadow: var(--shadow-sm);
+}
+
+/* --- 2. Dedicated Course Landing View Section --- */
+.free-course-page {
+  padding: var(--space-xl) 0;
+  background: var(--color-bg-main);
+}
+
+.course-page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.back-to-site-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-full);
+  background: var(--color-brand-taupe);
+  border: 1px solid var(--color-brand-pink);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-fast);
+}
+
+.back-to-site-btn:hover {
+  background: var(--color-brand-pink);
+}
+
+.course-main-video-box {
+  max-width: 920px;
+  margin: 0 auto 4rem;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-brand-pink);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  background: var(--color-text-primary);
+}
+
+.video-player-container {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+.main-video-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+.main-video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background: rgba(24, 42, 36, 0.4);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.main-video-overlay:hover {
+  background: rgba(24, 42, 36, 0.25);
+}
+
+.play-btn-lg {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--color-brand-pink);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 35px rgba(242, 184, 186, 0.9);
+  padding-left: 4px;
+  transition: transform var(--transition-fast);
+}
+
+.main-video-overlay:hover .play-btn-lg {
+  transform: scale(1.1);
+  background: #FFFFFF;
+}
+
+.play-pulse-lg {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(242, 184, 186, 0.4);
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.video-start-text {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background: rgba(24, 42, 36, 0.8);
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-full);
+}
+
+/* Modules Grid */
+.course-modules-wrapper {
+  margin-bottom: 4rem;
+}
+
+.modules-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.module-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-brand-taupe);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.8rem;
+  position: relative;
+  transition: var(--transition-normal);
+}
+
+.module-card:hover {
+  border-color: var(--color-brand-pink);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.module-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--color-brand-pink);
+  line-height: 1;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.module-content h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.module-content p {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.7;
+}
+
+/* Course Discount Banner Callout */
+.course-discount-banner {
+  background: linear-gradient(135deg, var(--color-text-primary) 0%, #2A453C 100%);
+  border: 2px solid var(--color-brand-pink);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 3rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(242, 184, 186, 0.3);
+}
+
+.discount-badge-icon {
+  font-size: 3.2rem;
+  flex-shrink: 0;
+}
+
+.discount-banner-content h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-brand-pink);
+  margin-bottom: 0.5rem;
+}
+
+.discount-banner-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.discount-banner-action {
+  flex-shrink: 0;
+}
+
+/* --- 3. Golden Education Masterclass Section --- */
+.golden-education {
+  padding: var(--space-xl) 0;
+  background: var(--color-bg-alt);
+  position: relative;
+}
+
+.golden-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.golden-heading {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.golden-lead {
+  font-size: 1.1rem;
+  color: var(--color-text-body);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.golden-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.golden-feature-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  background: var(--color-brand-taupe);
+  border: 1px solid var(--color-brand-pink);
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.golden-feature-item h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.golden-feature-item p {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* Golden Pricing Card */
+.golden-pricing-card {
+  background: var(--color-bg-main);
+  border: 2px solid var(--color-brand-pink);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg), var(--glow-gold);
+  overflow: hidden;
+}
+
+.pricing-card-header {
+  background: var(--color-text-primary);
+  padding: 2rem 2.2rem;
+  color: #fff;
+  position: relative;
+}
+
+.badge-discount {
+  display: inline-block;
+  background: var(--color-brand-pink);
+  color: var(--color-text-primary);
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.pricing-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-brand-pink);
+  margin-bottom: 0.4rem;
+}
+
+.pricing-sub {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.pricing-body {
+  padding: 2.2rem;
+}
+
+.price-comparison {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.old-price {
+  font-size: 1.2rem;
+  text-decoration: line-through;
+  color: #888;
+}
+
+.current-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.price-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.price-currency {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.discount-guarantee-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  padding: 0.5rem 0.8rem;
+  background: var(--color-brand-taupe);
+  border-radius: var(--radius-sm);
+}
+
+.pricing-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.pricing-features-list li {
+  font-size: 0.98rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+/* --- 4. Course Signup Pop-up Modal --- */
+.course-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(24, 42, 36, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.course-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.course-modal-container {
+  background: var(--color-bg-main);
+  border: 2px solid var(--color-brand-pink);
+  border-radius: var(--radius-xl);
+  max-width: 520px;
+  width: 100%;
+  padding: 2.8rem 2.4rem;
+  box-shadow: var(--shadow-lg), var(--glow-gold);
+  position: relative;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.course-modal-overlay.active .course-modal-container {
+  transform: translateY(0) scale(1);
+}
+
+.course-modal-close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--color-brand-taupe);
+  border: 1px solid var(--color-brand-pink);
+  color: var(--color-text-primary);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.course-modal-close:hover {
+  background: var(--color-brand-pink);
+}
+
+.modal-badge-tag {
+  display: inline-block;
+  background: var(--color-brand-pink);
+  color: var(--color-text-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.8rem;
+}
+
+.course-modal-header h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.course-modal-header p {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.course-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.course-signup-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.course-signup-form label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.course-signup-form input {
+  padding: 0.9rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-brand-taupe);
+  background: var(--color-bg-alt);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.course-signup-form input:focus {
+  border-color: var(--color-brand-pink);
+  box-shadow: 0 0 0 3px rgba(242, 184, 186, 0.35);
+}
+
+.modal-footer-note {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--clr-text-muted);
+}
+
+/* Mobile Media Query Overrides for Course Sections */
+@media (max-width: 992px) {
+  .course-teaser-grid,
+  .golden-grid {
+    grid-template-columns: 1fr;
+  }
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+  .course-discount-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .course-teaser-card {
+    padding: 2rem 1.5rem;
+  }
+}

@@ -588,4 +588,100 @@ document.addEventListener("DOMContentLoaded", () => {
     goToSlide(0);
     startAutoPlay();
   }
+
+  // ==========================================================================
+  // 12. Marketing Funnel: Free 20-Minute Course & Signup Modal Controller
+  // ==========================================================================
+  const freeCourseTeaser = document.getElementById("free-course-teaser");
+  const freeCoursePage = document.getElementById("free-course-page");
+  const openCoursePageBtns = document.querySelectorAll(".open-course-page-btn");
+  const closeCoursePageBtn = document.getElementById("close-course-page-btn");
+
+  const courseSignupModal = document.getElementById("course-signup-modal");
+  const openCourseModalBtns = document.querySelectorAll(".open-course-modal-btn");
+  const closeCourseModalBtn = document.getElementById("course-modal-close");
+  const courseSignupForm = document.getElementById("course-signup-form");
+
+  const openGoldenModalBtns = document.querySelectorAll(".open-golden-modal-btn");
+
+  // Open Dedicated Course Landing View
+  openCoursePageBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (freeCoursePage) {
+        freeCoursePage.style.display = "block";
+        freeCoursePage.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+
+  // Close Dedicated Course Landing View (Return to Main Site)
+  if (closeCoursePageBtn) {
+    closeCoursePageBtn.addEventListener("click", () => {
+      if (freeCoursePage) {
+        freeCoursePage.style.display = "none";
+        if (freeCourseTeaser) {
+          freeCourseTeaser.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  }
+
+  // Open Course Signup Popup Modal
+  const openCourseModal = () => {
+    if (courseSignupModal) {
+      courseSignupModal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  };
+
+  const closeCourseModal = () => {
+    if (courseSignupModal) {
+      courseSignupModal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  };
+
+  openCourseModalBtns.forEach((btn) => {
+    btn.addEventListener("click", openCourseModal);
+  });
+
+  if (closeCourseModalBtn) {
+    closeCourseModalBtn.addEventListener("click", closeCourseModal);
+  }
+
+  if (courseSignupModal) {
+    courseSignupModal.addEventListener("click", (e) => {
+      if (e.target === courseSignupModal) {
+        closeCourseModal();
+      }
+    });
+  }
+
+  // Submit Course Signup Form
+  if (courseSignupForm) {
+    courseSignupForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      closeCourseModal();
+      showToast(
+        "ثبت‌نام شما با موفقیت انجام شد! لینک مشاهده دوره رایگان و کد تخفیف ۶۰٪ پیامک شد."
+      );
+      courseSignupForm.reset();
+    });
+  }
+
+  // Open Booking Modal for Golden Education Masterclass
+  openGoldenModalBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const bookingModal = document.getElementById("booking-modal");
+      const modalServiceSelect = document.getElementById("modal-service");
+      if (bookingModal) {
+        if (modalServiceSelect) {
+          modalServiceSelect.value = "balayage";
+        }
+        bookingModal.classList.add("active");
+        document.body.style.overflow = "hidden";
+        showToast("تخفیف ۶۰ درصدی دوره طلایی (GOLDEN60) برای شما فعال گردید.");
+      }
+    });
+  });
 });
