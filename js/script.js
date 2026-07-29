@@ -592,10 +592,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================================================
   // 12. Marketing Funnel: Free 20-Minute Course & Signup Modal Controller
   // ==========================================================================
-  const freeCourseTeaser = document.getElementById("free-course-teaser");
-  const freeCoursePage = document.getElementById("free-course-page");
-  const openCoursePageBtns = document.querySelectorAll(".open-course-page-btn");
-  const closeCoursePageBtn = document.getElementById("close-course-page-btn");
+  const mainView = document.getElementById("main-view");
+  const courseHubView = document.getElementById("course-hub-view");
+  const openCourseHubBtns = document.querySelectorAll(".open-course-hub-btn");
+  const navLinksItems = document.querySelectorAll(".nav-links a");
+  const mobileNavLinksItems = document.querySelectorAll(".mobile-link");
 
   const courseSignupModal = document.getElementById("course-signup-modal");
   const openCourseModalBtns = document.querySelectorAll(".open-course-modal-btn");
@@ -604,27 +605,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const openGoldenModalBtns = document.querySelectorAll(".open-golden-modal-btn");
 
-  // Open Dedicated Course Landing View
-  openCoursePageBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (freeCoursePage) {
-        freeCoursePage.style.display = "block";
-        freeCoursePage.scrollIntoView({ behavior: "smooth" });
-      }
+  // Open Dedicated Course Hub Section View
+  const showCourseHub = () => {
+    if (mainView && courseHubView) {
+      mainView.style.display = "none";
+      courseHubView.style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const showMainView = () => {
+    if (mainView && courseHubView) {
+      mainView.style.display = "block";
+      courseHubView.style.display = "none";
+    }
+  };
+
+  openCourseHubBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      showCourseHub();
     });
   });
 
-  // Close Dedicated Course Landing View (Return to Main Site)
-  if (closeCoursePageBtn) {
-    closeCoursePageBtn.addEventListener("click", () => {
-      if (freeCoursePage) {
-        freeCoursePage.style.display = "none";
-        if (freeCourseTeaser) {
-          freeCourseTeaser.scrollIntoView({ behavior: "smooth" });
-        }
+  // Ensure normal nav links restore the main view
+  const restoreMainViewOnClick = (links) => {
+    links.forEach((link) => {
+      if (!link.classList.contains("open-course-hub-btn")) {
+        link.addEventListener("click", () => {
+          showMainView();
+        });
       }
     });
-  }
+  };
+
+  restoreMainViewOnClick(navLinksItems);
+  restoreMainViewOnClick(mobileNavLinksItems);
 
   // Open Course Signup Popup Modal
   const openCourseModal = () => {
